@@ -1,0 +1,76 @@
+body {
+    width:100%;
+    margin: 0;
+}
+
+.wrapper {
+    min-width:213px;
+    width:100%;
+}
+    
+#home {
+    width:100%;
+    min-width: 213px;
+}
+
+#herowrapper {
+    min-width:100px;
+    width: 100px;
+    padding:0;
+}
+
+#logowrapper {
+    width: 100%;
+    min-width:213px;
+    margin: 0;
+    padding:0;
+}
+
+#logo {
+    min-width: 80px;
+}
+
+#logotext {
+    min-width: 102px;
+}
+
+#missionwrapper {
+    min-width:180px;
+    width:80%;
+    padding:0;
+}
+
+.mission {
+    font-size: 100%;
+    margin: 1% 0 15% 0;
+}
+
+#menuwrapper {
+    min-width: 210px;
+}
+
+.menu {
+    min-width: 213px;
+    height:28px;
+    font-size: 80%;
+}
+
+table.menu td {
+    min-width: 71px;
+}
+
+table.menu td a {
+    padding:12px 0;
+}
+table.menu td.mobile {
+    display: table-cell;
+    
+}
+
+table.menu td.desktop {
+    display: none;
+}
+
+table.menu td a {
+    padding:5px 0;
+}
