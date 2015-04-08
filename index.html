@@ -7,30 +7,52 @@
     <title>Wombat Web Design</title>
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="icon" type="image/png" href="images/favicon/Wombat-Web-Designs-Logo.png">
-    <style>
+    <style type="text/css">
         @import url(./css/mobile.css) screen and (max-device-width:500px);
     </style>
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
 
     <script type="text/javascript">
         //<![CDATA[ 
-   /*     $(window).load(function(){
+        /*$(window).load(function(){
             var leftInit = $(".scroll_fixed").offset().left;
             var top = $('.scroll_fixed').offset().top - parseFloat($('.scroll_fixed').css('margin-top').replace(/auto/, 0));
+            var bottom = $('#home').height();
+            console.log(bottom);
 
 
         $(window).scroll(function(event) {
             var x = 0 - $('.wrapper').scrollLeft();
             var y = $('.scroll_fixed').scrollTop();
+            var z = $('.menu').offset().top;
+            var display = $('.scroll_fixed').css('display');
+
+            if (display === 'none'){
+                display = false;
+            }else{
+                display = true;
+            }
+
+            console.log(z, bottom, display);
 
         // whether that's below the form
-        if (y >= top) {
+
+            if (y >= top) {
             // if so, ad the fixed class
-            $('.scroll_fixed').addClass('fixed');
-        } else {
+                $('.scroll_fixed').addClass('fixed');
+
+                if (z >= bottom && display) {
+                    $('.menu').fadeOut();
+                }
+
+                if (z + 50 > bottom && !display) {
+                    $('.menu').fadeIn();
+                }
+
+            } else {
             // otherwise remove it
             $('.scroll_fixed').removeClass('fixed');
-        }
+            }
     
         $(".scroll_fixed").offset({
             left: x
@@ -44,9 +66,48 @@
 </head>
 
 <body>
+
+<!-- HOME -->
+<div id="home">
 <div class="pinstripe">
-<!-- MENU -->
-<div id="menuwrapper" class="scroll_fixed">
+<div class="wrapper">
+        <div id="herowrapper">
+            <div id="logowrapper">
+                <img src="images/logo/Wombat-Web-Designs-Logo_wombat.png" alt="Wombat Web Design" id="logo">
+                <img src="images/logo/Wombat-Web-Designs-Logo_text.png" alt="Wombat Web Design" id="logotext">
+            </div>
+            <div id="missionwrapper">
+                <img src="images/green%20line-01.png" class="mission" id="greenLine" alt="green line"/>
+                <p class="mission">Our goal is to provide excellent front end web design that integrates beautifully with back end programming: giving a straightforward, intuitive, responsive and classy experience. We present this with an excellent customer experience and a focus on the public’s needs.</p>
+            </div>
+        </div>
+</div>
+</div>
+</div>
+
+<!-- HOME -->
+<div id="menuwrapper">
+    <table class="menu">
+        <tr>
+            <td class="home desktop"><a href="#" class="active">Home</a></td>
+            <td class="about desktop"><a href="#">About Us</a></td>
+            <td class="contact desktop"><a href="#">Contact Us</a></td>
+            <td class="home mobile"><a href="#" class="active">Home</a></td>
+            <td class="about mobile"><a href="#">About</a></td>
+            <td class="contact mobile"><a href="#">Contact</a></td>
+        </tr>
+    </table>
+</div>
+
+<!-- ABOUT -->
+<div id="about" class="grayBack">
+<div class="pinstripe">
+<div class="wrapper">
+    <div class="header">
+        <div class="logo">
+            <img src="images/logo/Wombat-Web-Designs-Logo_wombat.png" alt="Wombat Web Design" class="logo">
+            <img src="images/logo/Wombat-Web-Designs-Logo_text.png" alt="Wombat Web Design" class="logotext">
+        </div>
         <table class="menu">
             <tr>
                 <td class="home desktop"><a href="#" class="active">Home</a></td>
@@ -57,27 +118,30 @@
                 <td class="contact mobile"><a href="#">Contact</a></td>
             </tr>
         </table>
-</div>
+    </div>
 
-<!-- HOME -->
-<div id="home" class="wrapper">
-        <div id="herowrapper">
-            <div id="logowrapper">
-                <img src="images/logo/Wombat-Web-Designs-Logo_wombat.png" alt="Wombat Web Design" id="logo">
-                <img src="images/logo/Wombat-Web-Designs-Logo_text.png" alt="Wombat Web Design" id="logotext">
-            </div>
-            <div id="missionwrapper">
-                <img src="images/green%20line-01.png" class="mission" id="greenLine"/>
-                <p class="mission">Our goal is to provide excellent front end web design that integrates beautifully with back end programming: giving a straightforward, intuitive, responsive and classy experience. We present this with an excellent customer experience and a focus on the public’s needs.</p>
-            </div>
+    <div class="columnWrapper">
+        <div id="vision" class="column">
+            <h1 class="columnHeader">Vision</h1>
+            <p class="columnText">Sed non laoreet leo. Vestibulum erat velit, finibus vitae venenatis ut, aliquet ut dui. In tincidunt auctor turpis eu semper. Suspendisse scelerisque bibendum magna et rutrum. Sed ac viverra ante. Vivamus dapibus ante sit amet ornare ullamcorper. Cras vitae sem turpis. Sed posuere justo vel tincidunt fringilla. Cras dignissim sapien dolor, eu rutrum dolor feugiat eget. Praesent velit velit, pharetra id malesuada sed, blandit ut risus. Donec in mauris quis velit iaculis euismod. Etiam sit.</p>
         </div>
+        <div id="expertise" class="column">
+            <h1 class="columnHeader">Expertise</h1>
+            <p class="columnText">Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam nunc purus, rutrum eu pharetra eu, viverra et enim. Nulla auctor, dolor ac scelerisque placerat, ante quam auctor est, id laoreet turpis tellus imperdiet neque. Quisque finibus posuere turpis ut pulvinar. Ut condimentum, nisi a fermentum finibus, purus arcu consequat eros, eu cursus neque magna et est. Donec scelerisque dignissim dolor, in tempus urna pharetra nec. Phasellus accumsan ultrices nisl eget porttitor. Maecenas commodo arcu eu ipsum euismod ultrices. In mattis urna et urna dignissim tincidunt. Sed suscipit iaculis malesuada. Phasellus suscipit orci eu velit rutrum.</p>
+        </div>
+        <div id="staff" class="column">
+            <h1 class="columnHeader">Staff</h1>
+            <img src="./images/staff/ssmith.jpg" class="staffPhoto" alt="Simeon Smith">
+            <h3 class="staffName">Simeon Smith</h3>
+            <p class="columnText">Quisque tempus ante vitae eros cursus gravida. Mauris in metus iaculis, pretium mauris vel, porttitor ipsum. Donec vehicula lorem at dolor eleifend mollis. In posuere convallis neque ut faucibus. Morbi viverra mauris vel porttitor luctus. Phasellus maximus mauris id arcu imperdiet elementum. Phasellus egestas tristique mauris, id feugiat odio. Nulla.</p>
+        </div>
+    </div>
+</div>
+</div>
 </div>
 
-<!-- ABOUT -->
-    
-<div id="about" class="wrapper">
+<!-- MENU -->
 
-</div>
-</div>
+
 </body>
 </html>
