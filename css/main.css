@@ -277,6 +277,7 @@ div.header table.menu td a {
     margin-right:4%;
     float:left;
     clear:none;
+    border-radius:15px;
 }
 
 .staffName{
