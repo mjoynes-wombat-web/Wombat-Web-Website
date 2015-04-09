@@ -16,8 +16,14 @@ body {
     min-height: 700px;
     margin: 0;
     display:table;
+    position:relative;
 }
 
+.clear{
+    width:100%;
+    height:1px;
+    clear:both;
+}
 
 /*----------BACKGROUND----------*/
 
@@ -27,26 +33,30 @@ body {
 }
 
 
-    /*HOME SECTION BACKGROUND*/
-    #home {             /*HOME SECTION BACKGROUND*/
-        background: -moz-linear-gradient(150deg, rgba(50, 21, 50, 1) 0%, rgba(84, 45, 84,1) 50%, rgba(74,39,74,1) 61%, rgba(64,33,64,1) 75%, rgba(37,29,37,1) 100%);
-        background: -webkit-linear-gradient(150deg, rgba(50, 21, 50, 1) 0%, rgba(84, 45, 84,1) 50%, rgba(74,39,74,1) 61%, rgba(64,33,64,1) 75%, rgba(37,29,37,1) 100%);
-        background: -o-linear-gradient(150deg, rgba(50, 21, 50, 1) 0%, rgba(84, 45, 84,1) 50%, rgba(74,39,74,1) 61%, rgba(64,33,64,1) 75%, rgba(37,29,37,1) 100%);
-        background: -ms-linear-gradient(150deg, rgba(50, 21, 50, 1) 0%, rgba(84, 45, 84,1) 50%, rgba(74,39,74,1) 61%, rgba(64,33,64,1) 75%, rgba(37,29,37,1) 100%);
-        background: linear-gradient(150deg, rgba(50, 21, 50, 1) 0%, rgba(84, 45, 84,1) 50%, rgba(74,39,74,1) 61%, rgba(64,33,64,1) 75%, rgba(37,29,37,1) 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#331333', endColorstr='#261e26', GradientType=1 );
-    }
+/*HOME SECTION BACKGROUND*/
+#home {             /*HOME SECTION BACKGROUND*/
+    background: -moz-linear-gradient(150deg, rgba(50, 21, 50, 1) 0%, rgba(84, 45, 84,1) 50%, rgba(74,39,74,1) 61%, rgba(64,33,64,1) 75%, rgba(37,29,37,1) 100%);
+    background: -webkit-linear-gradient(150deg, rgba(50, 21, 50, 1) 0%, rgba(84, 45, 84,1) 50%, rgba(74,39,74,1) 61%, rgba(64,33,64,1) 75%, rgba(37,29,37,1) 100%);
+    background: -o-linear-gradient(150deg, rgba(50, 21, 50, 1) 0%, rgba(84, 45, 84,1) 50%, rgba(74,39,74,1) 61%, rgba(64,33,64,1) 75%, rgba(37,29,37,1) 100%);
+    background: -ms-linear-gradient(150deg, rgba(50, 21, 50, 1) 0%, rgba(84, 45, 84,1) 50%, rgba(74,39,74,1) 61%, rgba(64,33,64,1) 75%, rgba(37,29,37,1) 100%);
+    background: linear-gradient(150deg, rgba(50, 21, 50, 1) 0%, rgba(84, 45, 84,1) 50%, rgba(74,39,74,1) 61%, rgba(64,33,64,1) 75%, rgba(37,29,37,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#331333', endColorstr='#261e26', GradientType=1 );
+}
 
-    /*GENERAL BACKGROUND*/
-    .grayBack {
-        background-color: #333333;
-        background: -moz-linear-gradient(150deg, rgba(51, 51, 51, 1) 0%, rgba(56, 56, 56,1) 50%, rgba(33,33,33,1) 100%);
-        background: -webkit-linear-gradient(150deg, rgba(51, 51, 51, 1) 0%, rgba(56, 56, 56,1) 50%, rgba(33,33,33,1) 100%);
-        background: -o-linear-gradient(150deg, rgba(51, 51, 51, 1) 0%, rgba(56, 56, 56,1) 50%, rgba(33,33,33,1) 100%);
-        background: -ms-linear-gradient(150deg, rgba(51, 51, 51, 1) 0%, rgba(56, 56, 56,1) 50%, rgba(33,33,33,1) 100%);
-        background: linear-gradient(150deg, rgba(51, 51, 51, 1) 0%, rgba(56, 56, 56,1) 50%, rgba(33,33,33,1) 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333333', endColorstr='#212121', GradientType=1 );
-    }
+div#home div.wrapper{
+    position: static;
+}
+
+/*GENERAL BACKGROUND*/
+.grayBack {
+    background-color: #333333;
+    background: -moz-linear-gradient(150deg, rgba(51, 51, 51, 1) 0%, rgba(56, 56, 56,1) 50%, rgba(33,33,33,1) 100%);
+    background: -webkit-linear-gradient(150deg, rgba(51, 51, 51, 1) 0%, rgba(56, 56, 56,1) 50%, rgba(33,33,33,1) 100%);
+    background: -o-linear-gradient(150deg, rgba(51, 51, 51, 1) 0%, rgba(56, 56, 56,1) 50%, rgba(33,33,33,1) 100%);
+    background: -ms-linear-gradient(150deg, rgba(51, 51, 51, 1) 0%, rgba(56, 56, 56,1) 50%, rgba(33,33,33,1) 100%);
+    background: linear-gradient(150deg, rgba(51, 51, 51, 1) 0%, rgba(56, 56, 56,1) 50%, rgba(33,33,33,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333333', endColorstr='#212121', GradientType=1 );
+}
 
 
 /*----------MENU----------*/
@@ -61,71 +71,71 @@ body {
     vertical-align: bottom;
 }
 
-    /*MENU BACKGROUND*/
-    .menu {
-        background-color: #2f6230;
-        background: -moz-linear-gradient(-45deg, rgba(26,128,27,1) 0%, rgba(47,98,48,1) 100%);
-        background: -webkit-linear-gradient(-45deg, rgba(26,128,27,1) 0%, rgba(47,98,48,1) 100%);
-        background: -o-linear-gradient(-45deg, rgba(26,128,27,1) 0%, rgba(47,98,48,1) 100%);
-        background: -ms-linear-gradient(-45deg, rgba(26,128,27,1) 0%, rgba(47,98,48,1) 100%);
-        background: linear-gradient(-100deg, #3a933e 0%, #1e4020 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a801b', endColorstr='#2f6230', GradientType=1 );
-    }
+/*MENU BACKGROUND*/
+.menu {
+    background-color: #2f6230;
+    background: -moz-linear-gradient(-45deg, rgba(26,128,27,1) 0%, rgba(47,98,48,1) 100%);
+    background: -webkit-linear-gradient(-45deg, rgba(26,128,27,1) 0%, rgba(47,98,48,1) 100%);
+    background: -o-linear-gradient(-45deg, rgba(26,128,27,1) 0%, rgba(47,98,48,1) 100%);
+    background: -ms-linear-gradient(-45deg, rgba(26,128,27,1) 0%, rgba(47,98,48,1) 100%);
+    background: linear-gradient(-100deg, #3a933e 0%, #1e4020 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a801b', endColorstr='#2f6230', GradientType=1 );
+}
 
-    /*MENU STYLING*/
-    .menu {
-        padding-top:650px;
-        width:100%;
-        min-width: 900px;
-        text-align: center;
-        color: #fff;
-        font-size: 130%;
-        font-weight: 500;
-        margin:-63px auto 0 auto;
-        border-collapse: collapse;
-        -webkit-box-shadow: 0 -3px 4px 0 rgba(0,0,0,0.3);
-        -moz-box-shadow: 0 -3px 4px 0 rgba(0,0,0,0.3);
-        box-shadow: 0 -3px 10px 0 rgba(0,0,0,0.3);
-        pointer-events: auto;
-    }
+/*MENU STYLING*/
+.menu {
+    padding-top:650px;
+    width:100%;
+    min-width: 900px;
+    text-align: center;
+    color: #fff;
+    font-size: 130%;
+    font-weight: 500;
+    margin:-63px auto 0 auto;
+    border-collapse: collapse;
+    -webkit-box-shadow: 0 -3px 4px 0 rgba(0,0,0,0.3);
+    -moz-box-shadow: 0 -3px 4px 0 rgba(0,0,0,0.3);
+    box-shadow: 0 -3px 10px 0 rgba(0,0,0,0.3);
+    pointer-events: auto;
+}
 
-    #menuwrapper .menu{
-        bottom:0;
-    }
+#menuwrapper .menu{
+    bottom:0;
+}
 
-    /*MOBILE MENU HIDDENT*/
-    table.menu td.mobile {
-        display: none;
-    }
+/*MOBILE MENU HIDDENT*/
+table.menu td.mobile {
+    display: none;
+}
 
-    /*MENU CELL STYLING*/
-    table.menu td {
-        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.75);
-        border-collapse: collapse;
-        border-width: 0;
-        width:33%;
-        min-width:150px;
-        height: 100%;
-        padding:0;
-    }
+/*MENU CELL STYLING*/
+table.menu td {
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.75);
+    border-collapse: collapse;
+    border-width: 0;
+    width:33%;
+    min-width:150px;
+    height: 100%;
+    padding:0;
+}
 
-        /*MENU LINK STYLING*/
-        table.menu td a.active {
-            background-color: rgba(0, 0, 0, 0.4);
-        }
+/*MENU LINK STYLING*/
+table.menu td a.active {
+    background-color: rgba(0, 0, 0, 0.4);
+}
 
-        table.menu td a {
-            text-decoration: none;
-            color:#fff;
-            display:block;
-            width:100%;
-            height:100%;
-            padding:17.5px 0;
-        }
+table.menu td a {
+    text-decoration: none;
+    color:#fff;
+    display:block;
+    width:100%;
+    height:100%;
+    padding:17.5px 0;
+}
 
-        table.menu td a:hover {
-            background-color: rgba(0, 0, 0, 0.2);
-        }
+table.menu td a:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
 
 
 /*----------HERO----------*/
@@ -138,56 +148,56 @@ body {
     z-index: 200;
 }
 
-    /*LOGO*/
-    #logowrapper {
-        display:block;
-        width:33%;
-        min-width: 248px;
-        margin: -2% auto 2% auto;
-    }
+/*LOGO*/
+#logowrapper {
+    display:block;
+    width:33%;
+    min-width: 248px;
+    margin: -2% auto 2% auto;
+}
 
 
-        /*LOGO STYLING*/
-        #logo {
-            display: block;
-            margin: auto;
-            width:58%;
-            min-width: 198px;
-            max-width: 248px;
-        }
+/*LOGO STYLING*/
+#logo {
+    display: block;
+    margin: auto;
+    width:58%;
+    min-width: 198px;
+    max-width: 248px;
+}
 
-        #logotext {
-            display: block;
-            margin: auto;
-            width:73.5%;
-            min-width: 248px;
-            max-width: 310px;
-        }
+#logotext {
+    display: block;
+    margin: auto;
+    width:73.5%;
+    min-width: 248px;
+    max-width: 310px;
+}
 
 
-    /*MISSION*/
-    #greenLine.mission {
-        width:70%;
-        min-width: 269px;
-        max-width: 400px;
-        margin: 36px auto 0 auto;
-        display: block;
-    }
+/*MISSION*/
+#greenLine.mission {
+    width:70%;
+    min-width: 269px;
+    max-width: 400px;
+    margin: 36px auto 0 auto;
+    display: block;
+}
 
-    #missionwrapper {
-        margin: 0 auto;
-        width:44%;
-        min-width: 454px;
-        max-width: 520px;
-    }
+#missionwrapper {
+    margin: 0 auto;
+    width:44%;
+    min-width: 454px;
+    max-width: 520px;
+}
 
-        /*MISSION STYLING*/
-        .mission {
-            color: #fff;
-            font-size: 110%;
-            text-align: center;
-            margin-top: 26px;
-        }
+/*MISSION STYLING*/
+.mission {
+    color: #fff;
+    font-size: 110%;
+    text-align: center;
+    margin-top: 26px;
+}
 
 
 /*----------HEADER----------*/
@@ -195,9 +205,9 @@ body {
 div.header{
     width:100%;
     margin-top:2.7%;
-    margin-bottom:71px;
 }
 
+/*LOGO*/
 div.logo{
     width:33%;
     min-width:337px;
@@ -220,6 +230,7 @@ div.header img.logotext{
     vertical-align: middle;
 }
 
+/*MENU*/
 div.header table.menu{
     width:62%;
     min-width: 629px;
@@ -236,6 +247,9 @@ div.header table.menu td.home a.active{
     border-radius:40px 0 0 40px;
 }
 
+div.header table.menu td.home a:hover {
+    border-radius: 40px 0 0 40px;
+}
 /*MENU LINK STYLING*/
 div.header table.menu td a {
     text-decoration: none;
@@ -246,19 +260,20 @@ div.header table.menu td a {
     padding:5% 0;
 }
 
-
+/*----------COLUMNS----------*/
 .columnWrapper {
     width:92%;
-    margin:0 3%;
+    margin:0 3% 0 3%;
     clear:both;
 }
 
 .column{
     width:29%;
     float:left;
-    padding:0 2%;
+    padding:0 2% 0% 2%;
 }
 
+/*COLUMN CONTENTS*/
 .columnHeader {
     font-size: 140%;
     color:#42a247;
@@ -272,6 +287,7 @@ div.header table.menu td a {
     margin-right:0;
 }
 
+/*STAFF COLUMN*/
 .staffPhoto{
     width:29%;
     margin-right:4%;
@@ -290,4 +306,23 @@ div.header table.menu td a {
 #staff .columnText{
     width:66%;
     float:right;
+}
+
+
+/*----------FOOTER----------*/
+
+/*FOOTER BACKGROUND*/
+.footer{
+    clear:both;
+    width:100%;
+    height:20%;
+    position:absolute;
+    clear:both;
+    bottom:0;
+    background: -moz-linear-gradient(150deg, rgba(50, 21, 50, 1) 0%, rgba(84, 45, 84,1) 50%, rgba(74,39,74,1) 61%, rgba(64,33,64,1) 75%, rgba(37,29,37,1) 100%);
+    background: -webkit-linear-gradient(150deg, rgba(50, 21, 50, 1) 0%, rgba(84, 45, 84,1) 50%, rgba(74,39,74,1) 61%, rgba(64,33,64,1) 75%, rgba(37,29,37,1) 100%);
+    background: -o-linear-gradient(150deg, rgba(50, 21, 50, 1) 0%, rgba(84, 45, 84,1) 50%, rgba(74,39,74,1) 61%, rgba(64,33,64,1) 75%, rgba(37,29,37,1) 100%);
+    background: -ms-linear-gradient(150deg, rgba(50, 21, 50, 1) 0%, rgba(84, 45, 84,1) 50%, rgba(74,39,74,1) 61%, rgba(64,33,64,1) 75%, rgba(37,29,37,1) 100%);
+    background: linear-gradient(150deg, rgba(50, 21, 50, 1) 0%, rgba(84, 45, 84,1) 50%, rgba(74,39,74,1) 61%, rgba(64,33,64,1) 75%, rgba(37,29,37,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#331333', endColorstr='#261e26', GradientType=1 );
 }
