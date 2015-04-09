@@ -8,15 +8,19 @@ body {
     height: auto;
     margin: 0;
     background-color: #552c55;
+    color:#c7c7c7;
 }
 
 .wrapper {
     width: 100%;
-    height: 100vh;
-    min-height: 700px;
+    min-height: 100vh;
     margin: 0;
     display:table;
     position:relative;
+}
+
+.sectionWrapper{
+    min-width:1000px;
 }
 
 .clear{
@@ -24,6 +28,16 @@ body {
     height:1px;
     clear:both;
 }
+
+a:link, a:visited {
+    color:#c78ec7;
+    text-decoration: none;
+}
+
+a:hover {
+    color:#a243a2;
+}
+
 
 /*----------BACKGROUND----------*/
 
@@ -45,6 +59,7 @@ body {
 
 div#home div.wrapper{
     position: static;
+    padding-bottom:0px;
 }
 
 /*GENERAL BACKGROUND*/
@@ -62,7 +77,6 @@ div#home div.wrapper{
 /*----------MENU----------*/
 #menuwrapper {
     width:100%;
-    min-width:1000px;
     padding: 0 auto;
     height:100%;
     pointer-events:none;
@@ -84,9 +98,8 @@ div#home div.wrapper{
 
 /*MENU STYLING*/
 .menu {
-    padding-top:650px;
     width:100%;
-    min-width: 900px;
+    min-width: 1000px;
     text-align: center;
     color: #fff;
     font-size: 130%;
@@ -232,13 +245,13 @@ div.header img.logotext{
 
 /*MENU*/
 div.header table.menu{
-    width:62%;
-    min-width: 629px;
+    width:66%;
+    min-width: 660px;
     height:80%;
     min-height: 42px;
     float:right;
     padding-top:0;
-    margin:1.5% 0;
+    margin:2% 0;
     vertical-align: middle;
     border-radius:40px 0 0 40px;
 }
@@ -257,14 +270,15 @@ div.header table.menu td a {
     display:block;
     width:100%;
     height:100%;
-    padding:5% 0;
+    padding:4% 0;
 }
 
 /*----------COLUMNS----------*/
 .columnWrapper {
-    width:92%;
+    width:94%;
     margin:0 3% 0 3%;
     clear:both;
+    padding-bottom:345px;
 }
 
 .column{
@@ -280,7 +294,7 @@ div.header table.menu td a {
 }
 
 .columnText {
-    font-size: 90%;
+    font-size: 95%;
     color:#C7C7C7;
     margin:2%;
     margin-left:0;
@@ -314,10 +328,10 @@ div.header table.menu td a {
 /*FOOTER BACKGROUND*/
 .footer{
     clear:both;
-    width:100%;
-    height:20%;
+    width:94%;
+    padding:30px 3% 40px 3%;
+    height:225px;
     position:absolute;
-    clear:both;
     bottom:0;
     background: -moz-linear-gradient(150deg, rgba(50, 21, 50, 1) 0%, rgba(84, 45, 84,1) 50%, rgba(74,39,74,1) 61%, rgba(64,33,64,1) 75%, rgba(37,29,37,1) 100%);
     background: -webkit-linear-gradient(150deg, rgba(50, 21, 50, 1) 0%, rgba(84, 45, 84,1) 50%, rgba(74,39,74,1) 61%, rgba(64,33,64,1) 75%, rgba(37,29,37,1) 100%);
@@ -325,4 +339,61 @@ div.header table.menu td a {
     background: -ms-linear-gradient(150deg, rgba(50, 21, 50, 1) 0%, rgba(84, 45, 84,1) 50%, rgba(74,39,74,1) 61%, rgba(64,33,64,1) 75%, rgba(37,29,37,1) 100%);
     background: linear-gradient(150deg, rgba(50, 21, 50, 1) 0%, rgba(84, 45, 84,1) 50%, rgba(74,39,74,1) 61%, rgba(64,33,64,1) 75%, rgba(37,29,37,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#331333', endColorstr='#261e26', GradientType=1 );
+}
+
+/*FOOTER TEXT*/
+.footerHeader {
+    font-size: 120%;
+    font-weight: 500;
+    color: #A08CA0;
+    margin:0 0 8px 0;
+}
+
+h4.footerHeader{
+    font-size:80%;
+    font-weight: 500;
+    color:#42a247;
+    margin:8px 0 4px 0;
+}
+
+/*SITEMAP*/
+.sitemap{
+    width:18%;
+}
+
+.sitemapLinks{
+    font-size: 100%;
+    line-height: 26px;
+    margin:0;
+}
+
+/*MISSION*/
+
+.footerMission{
+    margin:0;
+    font-size:75%;
+}
+
+/*BUSINESS INFORMATION*/
+
+.businessInfo{
+    width:40%;
+}
+
+.BIcolumn{
+    width:50%;
+    max-width:300px;
+    float:left;
+}
+
+.BItext{
+    font-size:95%;
+    margin:0;
+    line-height: 130%;
+}
+
+table.hours{
+    width:100%;
+    font-size:85%;
+    line-height:135%;
 }
