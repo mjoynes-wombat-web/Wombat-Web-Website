@@ -38,6 +38,19 @@ a:hover {
     color:#a243a2;
 }
 
+h3.heading {
+    font-size: 100%;
+    color:#42a247;
+    font-weight: normal;
+    margin-bottom:5px;
+}
+
+.asterisk {
+    color:#9e4699;
+    font-size:80%;
+    vertical-align: super;
+}
+
 
 /*----------BACKGROUND----------*/
 
@@ -288,9 +301,10 @@ div.header table.menu td a {
 }
 
 /*COLUMN CONTENTS*/
-.columnHeader {
+.columnHeading {
     font-size: 140%;
     color:#42a247;
+    margin:15px 0 10px 0;
 }
 
 .columnText {
@@ -323,14 +337,48 @@ div.header table.menu td a {
 }
 
 
+/*----------CONTACT---------*/
+
+/*TEXT*/
+
+.contactText{
+    margin:6px 0 3px 0;
+}
+
+.contactHours{
+    width:100%;
+    font-size:90%;
+    line-height:130%;
+}
+
+.contactHours td{
+    width:50%;
+}
+
+/*CONTACT FORM*/
+
+.contactInput {
+    width:90%;
+    font-size: 100%;
+    padding:4px;
+    font:'Open Sans', sans-serif;
+    color:#000;
+}
+
+.contactMsg {
+    height:50px;
+    vertical-align: top;
+}
+
+
 /*----------FOOTER----------*/
 
 /*FOOTER BACKGROUND*/
-.footer{
+.ftrWrapper{
     clear:both;
     width:94%;
     padding:30px 3% 40px 3%;
-    height:225px;
+    height:180px;
     position:absolute;
     bottom:0;
     background: -moz-linear-gradient(150deg, rgba(50, 21, 50, 1) 0%, rgba(84, 45, 84,1) 50%, rgba(74,39,74,1) 61%, rgba(64,33,64,1) 75%, rgba(37,29,37,1) 100%);
@@ -339,6 +387,11 @@ div.header table.menu td a {
     background: -ms-linear-gradient(150deg, rgba(50, 21, 50, 1) 0%, rgba(84, 45, 84,1) 50%, rgba(74,39,74,1) 61%, rgba(64,33,64,1) 75%, rgba(37,29,37,1) 100%);
     background: linear-gradient(150deg, rgba(50, 21, 50, 1) 0%, rgba(84, 45, 84,1) 50%, rgba(74,39,74,1) 61%, rgba(64,33,64,1) 75%, rgba(37,29,37,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#331333', endColorstr='#261e26', GradientType=1 );
+}
+
+.footer {
+    width:100%;
+    margin:0 auto;
 }
 
 /*FOOTER TEXT*/
@@ -353,7 +406,14 @@ h4.footerHeader{
     font-size:80%;
     font-weight: 500;
     color:#42a247;
-    margin:8px 0 4px 0;
+    margin:0;
+}
+
+.copyright{
+    margin:0;
+    font-size:65%;
+    padding:10px 2% 0 2%;
+    text-align:center;
 }
 
 /*SITEMAP*/
@@ -372,12 +432,14 @@ h4.footerHeader{
 .footerMission{
     margin:0;
     font-size:75%;
+    max-width:400px;
 }
 
 /*BUSINESS INFORMATION*/
 
 .businessInfo{
     width:40%;
+    max-width:510px;
 }
 
 .BIcolumn{
@@ -387,13 +449,14 @@ h4.footerHeader{
 }
 
 .BItext{
-    font-size:95%;
+    font-size:70%;
     margin:0;
-    line-height: 130%;
+    line-height: 120%;
+    padding: 2px 0 6px 0;
 }
 
 table.hours{
     width:100%;
-    font-size:85%;
-    line-height:135%;
+    font-size:65%;
+    line-height:120%;
 }
