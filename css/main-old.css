@@ -1,0 +1,495 @@
+@import url(http://fonts.googleapis.com/css?family=Overlock+SC|Overlock:400,700,900,400italic,700italic,900italic|Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800|Open+Sans+Condensed:300,300italic,700);
+
+
+/*----------GENERAL----------*/
+body {
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    background-color: #552c55;
+    color:#c7c7c7;
+}
+
+.wrapper {
+    width: 100%;
+    margin: 0;
+    display:table;
+    position:relative;
+    min-height:100vh;
+}
+
+.sectionWrapper{
+    min-width:1000px;
+}
+
+.clear{
+    width:100%;
+    height:1px;
+    clear:both;
+}
+
+a:link, a:visited {
+    color:#c78ec7;
+    text-decoration: none;
+}
+
+a:hover {
+    color:#a243a2;
+}
+
+h3.heading {
+    font-size: 100%;
+    color:#42a247;
+    font-weight: normal;
+    margin-bottom:5px;
+}
+
+.asterisk {
+    color:#9e4699;
+    font-size:80%;
+    vertical-align: super;
+}
+
+
+/*----------BACKGROUND----------*/
+
+.pinstripe {        /*PINSTRIPE BACKGROUND*/
+    background: url("../images/pinstripe-01.png") repeat;
+    background-size: 200px;
+}
+
+
+/*HOME SECTION BACKGROUND*/
+#home {             /*HOME SECTION BACKGROUND*/
+    background: -moz-linear-gradient(150deg, rgba(50, 21, 50, 1) 0%, rgba(84, 45, 84,1) 50%, rgba(74,39,74,1) 61%, rgba(64,33,64,1) 75%, rgba(37,29,37,1) 100%);
+    background: -webkit-linear-gradient(150deg, rgba(50, 21, 50, 1) 0%, rgba(84, 45, 84,1) 50%, rgba(74,39,74,1) 61%, rgba(64,33,64,1) 75%, rgba(37,29,37,1) 100%);
+    background: -o-linear-gradient(150deg, rgba(50, 21, 50, 1) 0%, rgba(84, 45, 84,1) 50%, rgba(74,39,74,1) 61%, rgba(64,33,64,1) 75%, rgba(37,29,37,1) 100%);
+    background: -ms-linear-gradient(150deg, rgba(50, 21, 50, 1) 0%, rgba(84, 45, 84,1) 50%, rgba(74,39,74,1) 61%, rgba(64,33,64,1) 75%, rgba(37,29,37,1) 100%);
+    background: url("../images/pinstripe-01.png") repeat, linear-gradient(150deg, rgba(50, 21, 50, 1) 0%, rgba(84, 45, 84,1) 50%, rgba(74,39,74,1) 61%, rgba(64,33,64,1) 75%, rgba(37,29,37,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#331333', endColorstr='#261e26', GradientType=1 );
+    overflow:auto;
+    min-height:100vh;
+}
+
+div#home div.wrapper{
+    position: static;
+    padding-bottom:0px;
+}
+
+/*GENERAL BACKGROUND*/
+.grayBack {
+    background-color: #333333;
+    background: -moz-linear-gradient(150deg, rgba(51, 51, 51, 1) 0%, rgba(56, 56, 56,1) 50%, rgba(33,33,33,1) 100%);
+    background: -webkit-linear-gradient(150deg, rgba(51, 51, 51, 1) 0%, rgba(56, 56, 56,1) 50%, rgba(33,33,33,1) 100%);
+    background: -o-linear-gradient(150deg, rgba(51, 51, 51, 1) 0%, rgba(56, 56, 56,1) 50%, rgba(33,33,33,1) 100%);
+    background: -ms-linear-gradient(150deg, rgba(51, 51, 51, 1) 0%, rgba(56, 56, 56,1) 50%, rgba(33,33,33,1) 100%);
+    background: linear-gradient(150deg, rgba(51, 51, 51, 1) 0%, rgba(56, 56, 56,1) 50%, rgba(33,33,33,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333333', endColorstr='#212121', GradientType=1 );
+}
+
+
+/*----------MENU----------*/
+#menuwrapper {
+    width:100%;
+    padding: 0 auto;
+    pointer-events:none;
+    z-index: 500;
+    position:absolute;
+    bottom:0;
+}
+
+/*MENU BACKGROUND*/
+.menu {
+    background-color: #2f6230;
+    background: -moz-linear-gradient(-45deg, rgba(26,128,27,1) 0%, rgba(47,98,48,1) 100%);
+    background: -webkit-linear-gradient(-45deg, rgba(26,128,27,1) 0%, rgba(47,98,48,1) 100%);
+    background: -o-linear-gradient(-45deg, rgba(26,128,27,1) 0%, rgba(47,98,48,1) 100%);
+    background: -ms-linear-gradient(-45deg, rgba(26,128,27,1) 0%, rgba(47,98,48,1) 100%);
+    background: linear-gradient(-100deg, #3a933e 0%, #1e4020 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a801b', endColorstr='#2f6230', GradientType=1 );
+}
+
+/*MENU STYLING*/
+.menu {
+    width:100%;
+    min-width: 1000px;
+    text-align: center;
+    color: #fff;
+    font-size: 130%;
+    font-weight: 500;
+    margin:-63px auto 0 auto;
+    border-collapse: collapse;
+    -webkit-box-shadow: 0 -3px 4px 0 rgba(0,0,0,0.3);
+    -moz-box-shadow: 0 -3px 4px 0 rgba(0,0,0,0.3);
+    box-shadow: 0 -3px 10px 0 rgba(0,0,0,0.3);
+    pointer-events: auto;
+}
+
+ul.menu{
+    list-style-type: none;
+    padding:0;
+    margin:0;
+}
+
+ul.menu li{
+    display:inline-block;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.75);
+    height: 100%;
+    padding:0;
+    width:30%;
+}
+
+ul.menu li.mobile{
+    display:none;
+}
+
+ul.menu li a{
+    display:inline-block;
+    width:100%;
+    min-width:150px;
+    color:#fff;
+}
+
+ul.menu li a.active{
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+ul.menu li a:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#menuwrapper .menu{
+    bottom:0;
+}
+
+/*MOBILE MENU HIDDENT*/
+table.menu td.mobile {
+    display: none;
+}
+
+/*MENU CELL STYLING*/
+table.menu td {
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.75);
+    border-collapse: collapse;
+    border-width: 0;
+    width:33%;
+    min-width:150px;
+    height: 100%;
+    padding:0;
+}
+
+/*MENU LINK STYLING*/
+table.menu td a.active {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+table.menu td a {
+    text-decoration: none;
+    color:#fff;
+    display:block;
+    width:100%;
+    height:100%;
+    padding:17.5px 0;
+}
+
+table.menu td a:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+/*----------HERO----------*/
+
+#herowrapper {
+    width: 100%;
+    min-width:420px;
+    z-index: 200;
+    clear:right;
+}
+
+/*LOGO*/
+#logowrapper {
+    display:block;
+    width:33%;
+    min-width: 248px;
+    margin: -2% auto 2% auto;
+}
+
+
+/*LOGO STYLING*/
+#logo {
+    display: block;
+    margin: auto;
+    width:58%;
+    min-width: 198px;
+    max-width: 248px;
+}
+
+#logotext {
+    display: block;
+    margin: auto;
+    width:73.5%;
+    min-width: 248px;
+    max-width: 310px;
+}
+
+
+/*MISSION*/
+#greenLine.mission {
+    width:70%;
+    min-width: 269px;
+    max-width: 400px;
+    margin: 36px auto 0 auto;
+    display: block;
+}
+
+#missionwrapper {
+    margin: 0 auto;
+    width:44%;
+    min-width: 454px;
+    max-width: 520px;
+}
+
+/*MISSION STYLING*/
+.mission {
+    color: #fff;
+    font-size: 110%;
+    text-align: center;
+    margin-top: 26px;
+}
+
+
+/*----------HEADER----------*/
+
+div.header{
+    width:100%;
+    margin-top:2.7%;
+}
+
+/*LOGO*/
+div.logo{
+    width:33%;
+    min-width:337px;
+    text-align: center;
+    float:left;
+    margin-bottom:4%;
+}
+
+div.header img.logo{
+    width:27%;
+    min-width:92px;
+    max-width: 152px;
+    vertical-align: middle;
+}
+
+div.header img.logotext{
+    width:54%;
+    min-width:185px;
+    max-width:306px;
+    vertical-align: middle;
+}
+
+/*MENU*/
+div.header table.menu{
+    width:66%;
+    min-width: 660px;
+    height:80%;
+    min-height: 42px;
+    float:right;
+    padding-top:0;
+    margin:2% 0;
+    vertical-align: middle;
+    border-radius:40px 0 0 40px;
+}
+
+div.header table.menu td.home a.active{
+    border-radius:40px 0 0 40px;
+}
+
+div.header table.menu td.home a:hover {
+    border-radius: 40px 0 0 40px;
+}
+/*MENU LINK STYLING*/
+div.header table.menu td a {
+    text-decoration: none;
+    color:#fff;
+    display:block;
+    width:100%;
+    height:100%;
+    padding:4% 0;
+}
+
+/*----------COLUMNS----------*/
+.columnWrapper {
+    width:94%;
+    margin:0 3% 0 3%;
+    clear:both;
+    padding-bottom:345px;
+}
+
+.column{
+    width:29%;
+    float:left;
+    padding:0 2% 0% 2%;
+}
+
+/*COLUMN CONTENTS*/
+.columnHeading {
+    font-size: 140%;
+    color:#42a247;
+    margin:15px 0 10px 0;
+}
+
+.columnText {
+    font-size: 95%;
+    color:#C7C7C7;
+    margin:2%;
+    margin-left:0;
+    margin-right:0;
+}
+
+/*STAFF COLUMN*/
+.staffPhoto{
+    width:29%;
+    margin-right:4%;
+    float:left;
+    clear:none;
+    border-radius:15px;
+}
+
+.staffName{
+    font-weight: 500;
+    font-size: 120%;
+    margin:1% 0;
+    color: #9e4699;
+}
+
+#staff .columnText{
+    width:66%;
+    float:right;
+}
+
+
+/*----------CONTACT---------*/
+
+/*TEXT*/
+
+.contactText{
+    margin:6px 0 3px 0;
+}
+
+.contactHours{
+    width:100%;
+    font-size:90%;
+    line-height:130%;
+}
+
+.contactHours td{
+    width:50%;
+}
+
+/*CONTACT FORM*/
+
+.contactInput {
+    width:90%;
+    font-size: 100%;
+    padding:4px;
+    font:'Open Sans', sans-serif;
+    color:#000;
+}
+
+.contactMsg {
+    height:50px;
+    vertical-align: top;
+}
+
+
+/*----------FOOTER----------*/
+
+/*FOOTER BACKGROUND*/
+.ftrWrapper{
+    clear:both;
+    width:94%;
+    padding:30px 3% 40px 3%;
+    height:180px;
+    position:absolute;
+    bottom:0;
+    background: -moz-linear-gradient(150deg, rgba(50, 21, 50, 1) 0%, rgba(84, 45, 84,1) 50%, rgba(74,39,74,1) 61%, rgba(64,33,64,1) 75%, rgba(37,29,37,1) 100%);
+    background: -webkit-linear-gradient(150deg, rgba(50, 21, 50, 1) 0%, rgba(84, 45, 84,1) 50%, rgba(74,39,74,1) 61%, rgba(64,33,64,1) 75%, rgba(37,29,37,1) 100%);
+    background: -o-linear-gradient(150deg, rgba(50, 21, 50, 1) 0%, rgba(84, 45, 84,1) 50%, rgba(74,39,74,1) 61%, rgba(64,33,64,1) 75%, rgba(37,29,37,1) 100%);
+    background: -ms-linear-gradient(150deg, rgba(50, 21, 50, 1) 0%, rgba(84, 45, 84,1) 50%, rgba(74,39,74,1) 61%, rgba(64,33,64,1) 75%, rgba(37,29,37,1) 100%);
+    background: linear-gradient(150deg, rgba(50, 21, 50, 1) 0%, rgba(84, 45, 84,1) 50%, rgba(74,39,74,1) 61%, rgba(64,33,64,1) 75%, rgba(37,29,37,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#331333', endColorstr='#261e26', GradientType=1 );
+}
+
+.footer {
+    width:100%;
+    margin:0 auto;
+}
+
+/*FOOTER TEXT*/
+.footerHeader {
+    font-size: 120%;
+    font-weight: 500;
+    color: #A08CA0;
+    margin:0 0 8px 0;
+}
+
+h4.footerHeader{
+    font-size:80%;
+    font-weight: 500;
+    color:#42a247;
+    margin:0;
+}
+
+.copyright{
+    margin:0;
+    font-size:65%;
+    padding:10px 2% 0 2%;
+    text-align:center;
+}
+
+/*SITEMAP*/
+.sitemap{
+    width:18%;
+}
+
+.sitemapLinks{
+    font-size: 100%;
+    line-height: 26px;
+    margin:0;
+}
+
+/*MISSION*/
+
+.footerMission{
+    margin:0;
+    font-size:75%;
+    max-width:400px;
+}
+
+/*BUSINESS INFORMATION*/
+
+.businessInfo{
+    width:40%;
+    max-width:510px;
+}
+
+.BIcolumn{
+    width:50%;
+    max-width:300px;
+    float:left;
+}
+
+.BItext{
+    font-size:70%;
+    margin:0;
+    line-height: 120%;
+    padding: 2px 0 6px 0;
+}
+
+table.hours{
+    width:100%;
+    font-size:65%;
+    line-height:120%;
+}
