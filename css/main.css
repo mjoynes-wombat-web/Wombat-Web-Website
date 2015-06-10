@@ -7,23 +7,24 @@ html, body{
 body{
     height:100%;
     min-width:980px;
-    min-height:648px;
+    min-height:700px;
     margin:0;
     padding:0;
     background-color: #333333;
     background: url("../images/pinstripe.png") repeat, #333;
     background: url("../images/pinstripe.png") repeat, -moz-linear-gradient(150deg, rgba(51, 51, 51, 1) 0%, rgba(56, 56, 56,1) 50%, rgba(33,33,33,1) 100%);
     background: url("../images/pinstripe.png") repeat, -webkit-linear-gradient(150deg, rgba(51, 51, 51, 1) 0%, rgba(56, 56, 56,1) 50%, rgba(33,33,33,1) 100%);
-    background url("../images/pinstripe.png") repeat,: -o-linear-gradient(150deg, rgba(51, 51, 51, 1) 0%, rgba(56, 56, 56,1) 50%, rgba(33,33,33,1) 100%);
+    background: url("../images/pinstripe.png") repeat, -o-linear-gradient(150deg, rgba(51, 51, 51, 1) 0%, rgba(56, 56, 56,1) 50%, rgba(33,33,33,1) 100%);
     background: url("../images/pinstripe.png") repeat, -ms-linear-gradient(150deg, rgba(51, 51, 51, 1) 0%, rgba(56, 56, 56,1) 50%, rgba(33,33,33,1) 100%);
     background: url("../images/pinstripe.png") repeat, linear-gradient(150deg, rgba(51, 51, 51, 1) 0%, rgba(56, 56, 56,1) 50%, rgba(33,33,33,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333333', endColorstr='#212121', GradientType=1 );
+    overflow: auto;
 }
 
 #siteWrapper{
     height: 100%;
     min-width:980px;
-    min-height:648px;
+    min-height:700px;
     background-color: #542d54;
     background: url("../images/pinstripe.png") repeat, #542D54;
     background: url("../images/pinstripe.png") repeat, -moz-linear-gradient(150deg, rgba(50, 21, 50, 1) 0%, rgba(84, 45, 84,1) 50%, rgba(74,39,74,1) 61%, rgba(64,33,64,1) 75%, rgba(37,29,37,1) 100%);
@@ -64,9 +65,9 @@ body{
 header{
     width:100%;
     min-width:980px;
-    min-height:550px;
-    height:78%;
-    top:22%;
+    min-height:574px;
+    height:82%;
+    top:18%;
     position:relative;
 
 }
@@ -93,6 +94,7 @@ header{
         text-indent:-999999px;
         height:0px;
         margin:0;
+        float:left;
     }
 
     /*MISSION*/
@@ -174,43 +176,54 @@ header{
     top:auto;
     padding-top:2.7%;
     vertical-align:middle;
-    overflow:auto;
-    display:table;
+    overflow:visible;
 }
 
 #logo.topMenu{
-    width:7.9%;
+    width:9.39%;
     min-width:92px;
     max-width:152px;
     padding-left:2.7%;
     margin:0;;
     vertical-align:middle;
-    display:inline-block!important;
+    float:left;
 }
 
 #logotext.topMenu{
-    width:15.9%;
+    width:18.87%;
     min-width:185px;
     max-width:306px;
     margin:0;
     vertical-align:middle;
-    display:inline-block!important;
+    float:left;
+    padding-top:.9%;
 }
 
 #nav.topMenu{
-    width:66%;
+    width:65.04%;
     min-width:650px;
     position:static;
     bottom:auto;
     vertical-align:middle;
-    display:inline-block!important;
+    text-align:right;
+    display:inline-block;
+    float:right;
+    padding-top:2%;
+
 }
 #nav.topMenu ul{
+    box-shadow: 0 3px 10px 0 rgba(0,0,0,0.3);
+    border-bottom-left-radius: 24px;
+    border-top-left-radius: 24px;
+}
 
+#nav.topMenu ul li.home a{
+    border-bottom-left-radius: 24px;
+    border-top-left-radius: 24px;
 }
 
 #nav.topMenu ul li a{
-    padding:10px 0;
+    padding:4% 0;
 }
 
 #siteWrapper.content{
@@ -218,10 +231,29 @@ header{
     background: url("../images/pinstripe.png") repeat, #333;
     background: url("../images/pinstripe.png") repeat, -moz-linear-gradient(150deg, rgba(51, 51, 51, 1) 0%, rgba(56, 56, 56,1) 50%, rgba(33,33,33,1) 100%);
     background: url("../images/pinstripe.png") repeat, -webkit-linear-gradient(150deg, rgba(51, 51, 51, 1) 0%, rgba(56, 56, 56,1) 50%, rgba(33,33,33,1) 100%);
-    background url("../images/pinstripe.png") repeat,: -o-linear-gradient(150deg, rgba(51, 51, 51, 1) 0%, rgba(56, 56, 56,1) 50%, rgba(33,33,33,1) 100%);
+    background: url("../images/pinstripe.png") repeat, -o-linear-gradient(150deg, rgba(51, 51, 51, 1) 0%, rgba(56, 56, 56,1) 50%, rgba(33,33,33,1) 100%);
     background: url("../images/pinstripe.png") repeat, -ms-linear-gradient(150deg, rgba(51, 51, 51, 1) 0%, rgba(56, 56, 56,1) 50%, rgba(33,33,33,1) 100%);
-    background: url("../images/pinstripe.png") repeat, linear-gradient(150deg, rgba(51, 51, 51, 1) 0%, rgba(56, 56, 56,1) 50%, rgba(33,33,33,1) 100%);
+    background-image: url("../images/pinstripe.png") repeat, linear-gradient(150deg, rgba(51, 51, 51, 1) 0%, rgba(56, 56, 56,1) 50%, rgba(33,33,33,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333333', endColorstr='#212121', GradientType=1 );
+    overflow:auto;
 }
+
+#main{
+    width:100%;
+    min-width:868px;
+    padding:2.7%;
+}
+
+.column{
+    width:29%;
+    float:left;
+    margin:0 2%;
+}
+.columnHeading{
+    font-weight: 700;
+    font-size:1.5em;
+}
+
+/*******ABOUT*******/
 
 /*******FOOTER*******/
