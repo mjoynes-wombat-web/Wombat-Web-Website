@@ -91,7 +91,7 @@
                         <label class="title" for="email">Email:</label>
                         <input type="email" name="email" id="email" placeholder="jsmith@gmail.com" required="required">
                         <label class="title subject" for="subject">Subject:</label>
-                        <input type="text" name="subject" placeholder="Wales Facility" id="subject">
+                        <input type="text" name="subject" placeholder="New Website" id="subject">
                     </p>
                     <p>
                         <label for="category" class="title">Category:</label>
@@ -109,10 +109,12 @@
                 </fieldset>
                 <div class="submit">
                     <p id="reqDis">Indicates a required field.</p>
+                    <label for="emailCopy" class="emailCopy">Please email me a copy of the email.</label>
+                    <input type="checkbox" name="emailCopy" id="emailCopy">
+
                     <input id="submit" type="submit" value="Send Message" onclick='confirmMsg()'>
                 </div>
             </form>
-            <p>Required fields.</p>
         </section><!--END CONTACT FORM-->
         <!--HOURS-->
         <section id="Hours" class="column">
@@ -148,40 +150,27 @@
                 </tr>
                 <tr>
                     <td>Holidays</td>
-                    <td><a href="#">See Calendar</a></td>
+                    <td><a href="#calendar">See Calendar</a></td>
                 </tr>
             </table>
-            <h1 class="columnHeading">Holiday Calendar</h1>
+            <h1 id='calendar' class="columnHeading">Holiday Calendar</h1>
             <table class="contactHours">
                 <tr>
                     <td>May 25th</td>
-                    <td>Memorial Day</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>Closed</td>
+                    <td>Memorial Day<br>Closed</td>
                 </tr>
                 <tr>
                     <td>June 5th</td>
-                    <td>Personal Day</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>Closed</td>
+                    <td>Personal Day<br>Closed</td>
                 </tr>
                 <tr>
                     <td>July 3rd</td>
-                    <td>Independence Day</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>Closed</td>
+                    <td>Independence Day<br>Closed</td>
                 </tr>
             </table>
         </section><!--END HOURS-->
     </article><!--END CONTACT-->
 </main><!--END MAIN CONTENT-->
-
 
 <!--FOOTER-->
 <footer id="footer">
@@ -197,7 +186,7 @@
         <section class="BIcolumn">
             <h4 class="footerHeader">Phone</h4>
             <p class="BItext">1.209.965.7932</p>
-            <h4 class="footerHeader">Emial</h4>
+            <h4 class="footerHeader">Email</h4>
             <p class="BItext"><a href="mailto:info@wombatweb.us">info@wombatweb.us</a> </p>
             <h4 class="footerHeader">Address</h4>
             <p class="BItext">808 E. 6th Ave. #1<br>Ellensburg, WA 98926</p>
@@ -236,7 +225,7 @@
                 </tr>
                 <tr>
                     <td>Holidays</td>
-                    <td><a href="#">See Calendar</a></td>
+                    <td><a onclick="showContact()" href="#calendar">See Calendar</a></td>
                 </tr>
             </table>
         </section><!--END HOURS-->
@@ -245,15 +234,15 @@
     <aside class="column sitemap">
         <h3 class="footerHeader">Sitemap</h3>
         <p class="sitemapLinks">
-            <a href="#">Home</a><br>
-            <a href="#">About Us</a><br>
-            <a href="#">Contact Us</a>
+            <a onclick="showHome()">Home</a><br>
+            <a onclick="showAbout()">About Us</a><br>
+            <a onclick="showContact()">Contact Us</a>
         </p>
     </aside><!--END SITEMAP-->
     <!--COPYRIGHT-->
     <p class = "copyright">Copyright © 2015 <a href="http://www.wombatweb.us">Wombat Web Design®</a></p><!--END COPYRIGHT-->
 </footer><!--END FOOTER-->
-
+<div class="clear"></div>
 </div>
 </body>
 </html>

@@ -57,6 +57,7 @@ function showMenuTop(){
     $('#logotext').fadeToggle(600);
     $('#nav').fadeToggle(600);
     $('#siteWrapper').fadeToggle(600);
+    $('#footer').delay(600).fadeToggle(600);
 }
 
 function showHome() {

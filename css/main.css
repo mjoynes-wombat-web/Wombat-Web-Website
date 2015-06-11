@@ -5,20 +5,16 @@ html, body{
 }
 
 body{
-    height:100%;
-    min-width:980px;
-    min-height:700px;
     margin:0;
     padding:0;
     background-color: #333333;
-    background: url("../images/pinstripe.png") repeat, #333;
-    background: url("../images/pinstripe.png") repeat, -moz-linear-gradient(150deg, rgba(51, 51, 51, 1) 0%, rgba(56, 56, 56,1) 50%, rgba(33,33,33,1) 100%);
-    background: url("../images/pinstripe.png") repeat, -webkit-linear-gradient(150deg, rgba(51, 51, 51, 1) 0%, rgba(56, 56, 56,1) 50%, rgba(33,33,33,1) 100%);
-    background: url("../images/pinstripe.png") repeat, -o-linear-gradient(150deg, rgba(51, 51, 51, 1) 0%, rgba(56, 56, 56,1) 50%, rgba(33,33,33,1) 100%);
-    background: url("../images/pinstripe.png") repeat, -ms-linear-gradient(150deg, rgba(51, 51, 51, 1) 0%, rgba(56, 56, 56,1) 50%, rgba(33,33,33,1) 100%);
-    background: url("../images/pinstripe.png") repeat, linear-gradient(150deg, rgba(51, 51, 51, 1) 0%, rgba(56, 56, 56,1) 50%, rgba(33,33,33,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333333', endColorstr='#212121', GradientType=1 );
-    overflow: auto;
+    overflow:auto;
+    min-width:980px;
+    min-height:700px;
+}
+
+.clear{
+    clear:both;
 }
 
 #siteWrapper{
@@ -33,12 +29,14 @@ body{
     background: url("../images/pinstripe.png") repeat, -ms-linear-gradient(150deg, rgba(50, 21, 50, 1) 0%, rgba(84, 45, 84,1) 50%, rgba(74,39,74,1) 61%, rgba(64,33,64,1) 75%, rgba(37,29,37,1) 100%);
     background: url("../images/pinstripe.png") repeat, linear-gradient(150deg, rgba(50, 21, 50, 1) 0%, rgba(84, 45, 84,1) 50%, rgba(74,39,74,1) 61%, rgba(64,33,64,1) 75%, rgba(37,29,37,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#331333', endColorstr='#261e26', GradientType=1 );
+    overflow:visible;
 }
 
     /*TEXT*/
-    h1, h2, h3, h4, h5, h6, p, a, span{
+    h1, h2, h3, h4, h5, h6, p, a, span, fieldset, label, td, th{
         color:#fff;
         font-family:'Open Sans', Arial, sans-serif;
+        font-size:.9em;
     }
 
         /*HEADINGS*/
@@ -62,7 +60,7 @@ body{
 
 /*******HEADER*******/
 
-header{
+#header{
     width:100%;
     min-width:980px;
     min-height:574px;
@@ -147,7 +145,7 @@ header{
     display:inline-block;
     width:100%;
     text-align:center;
-    padding:12px 0;
+    padding:18px 0;
     font-size:1.3em;
     font-weight:500;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.75);
@@ -227,6 +225,7 @@ header{
 }
 
 #siteWrapper.content{
+    height:initial;
     background-color: #333333;
     background: url("../images/pinstripe.png") repeat, #333;
     background: url("../images/pinstripe.png") repeat, -moz-linear-gradient(150deg, rgba(51, 51, 51, 1) 0%, rgba(56, 56, 56,1) 50%, rgba(33,33,33,1) 100%);
@@ -235,13 +234,14 @@ header{
     background: url("../images/pinstripe.png") repeat, -ms-linear-gradient(150deg, rgba(51, 51, 51, 1) 0%, rgba(56, 56, 56,1) 50%, rgba(33,33,33,1) 100%);
     background-image: url("../images/pinstripe.png") repeat, linear-gradient(150deg, rgba(51, 51, 51, 1) 0%, rgba(56, 56, 56,1) 50%, rgba(33,33,33,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333333', endColorstr='#212121', GradientType=1 );
-    overflow:auto;
 }
 
 #main{
-    width:100%;
+    width:95%;
     min-width:868px;
-    padding:2.7%;
+    padding:2.5%;
+    overflow:auto;
+    min-height:450px;
 }
 
 .column{
@@ -251,9 +251,233 @@ header{
 }
 .columnHeading{
     font-weight: 700;
-    font-size:1.5em;
+    font-size:1.3em;
+    margin:35px 0 15px 0;
+}
+
+h3.heading{
+    font-weight:normal;
+    font-size:1em;
+    margin:14px 0 4px 0;
 }
 
 /*******ABOUT*******/
 
+#about{
+    overflow:auto;
+}
+
+#staff h4, #staff p{
+    float:left;
+    width:69%;
+    padding-left:6%
+}
+
+#staff h4{
+    margin:0 0 5px 0;
+}
+
+#staff p{
+    margin:5px 0 30px 0;
+}
+
+#staff img{
+    float:left;
+    width:25%;
+    max-width:105px;
+    margin-bottom:30px;
+}
+
+/*******CONTACT*******/
+
+p.contactText{
+    margin:4px 0 14px 0;
+}
+
+    /*Contact Form*/
+    #contactUs fieldset{
+        border:none;
+        padding:0;
+        margin:0;
+    }
+
+    #contactUs label{
+        width:25%;
+        max-width:80px;
+        display:inline-block;
+        text-align:left;
+        padding:3% 3% 3% 0;
+        font-size:1.2em;
+
+    }
+
+    #contactUs input{
+        width:75%;
+        display:inline-block;
+        height:1.2em;
+        padding:1%;
+        margin:2% 0;
+    }
+
+    #category{
+        width:78%;
+        padding:1%;
+        cursor:pointer;
+    }
+
+    #contactUs textarea{
+        width:92%;
+        height:125px;
+        padding:2%;
+    }
+
+    #name, #email, #message{
+        background: #fff url("../images/form_required.png") no-repeat top right;
+    }
+
+    #name:focus, #email:focus, #message:focus{
+        background: #fff;
+    }
+
+    #contactUs div.submit p{
+        margin:8px 0;
+        width:92%;
+    }
+
+    #reqDis{
+        background: url("../images/form_required.png") no-repeat top right;
+        padding-right:15px;
+        text-align:right;
+    }
+
+    #contactUs div.submit input#emailCopy{
+        width:5%;
+        margin:4% 0 4% 1%;
+        cursor:pointer;
+    }
+
+    #contactUs div.submit label.emailCopy{
+        width:89%;
+        max-width:1000px;
+        padding:0;
+        font-size:.85em;
+        text-align:right;
+        line-height:.85em;
+    }
+
+    #contactUs div.submit input#submit{
+        float:right;
+        width:40%;
+        min-width:150px;
+        margin:15px 4% 0 0;
+        height:3em;
+        background-color: #42a247;
+        border:none;
+        font-size:1em;
+        color:#fff;
+        font-weight: 500;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75);
+        cursor: pointer;
+        border-top:1px solid #57d45d;
+        border-left:1px solid #57d45d;
+        border-bottom:2px solid #183818;
+        border-right:2px solid #183818;
+    }
+
+    #contactUs div.submit input#submit:hover{
+        background-color:#2d6e30;
+        border-top:1px solid #37873b;
+        border-left:1px solid #37873b;
+    }
+
+    #contactUs div.submit input#submit:active{
+        background-color:#2d6e30;
+        border-top:2px solid #183818;
+        border-left:2px solid #183818;
+        border-bottom:1px solid #37873b;
+        border-right:1px solid #37873b;
+        outline-width:0;
+    }
+
+    /*HOURS*/
+
+    .contactHours{
+        width:100%;
+        max-width:400px;
+    }
+
+    .contactHours td{
+        width:50%;
+        padding:4px;
+    }
+
+
 /*******FOOTER*******/
+
+#footer{
+    width:95%;
+    min-width:868px;
+    padding:1.5% 2.5% 1% 2.5%;
+    margin-top:2.5%;
+    overflow:auto;
+    background-color:#542D54;
+    background : -moz-linear-gradient(51.22% 122.07% -80deg,rgba(50, 21, 50, 1) 0%,rgba(84, 45, 84, 1) 50%,rgba(74, 39, 74, 1) 61%,rgba(64, 33, 64, 1) 75%,rgba(37, 29, 37, 1) 100%);
+    background : -webkit-linear-gradient(-80deg, rgba(50, 21, 50, 1) 0%, rgba(84, 45, 84, 1) 50%, rgba(74, 39, 74, 1) 61%, rgba(64, 33, 64, 1) 75%, rgba(37, 29, 37, 1) 100%);
+    background : -o-linear-gradient(-80deg, rgba(50, 21, 50, 1) 0%, rgba(84, 45, 84, 1) 50%, rgba(74, 39, 74, 1) 61%, rgba(64, 33, 64, 1) 75%, rgba(37, 29, 37, 1) 100%);
+    background : -ms-linear-gradient(-80deg, rgba(50, 21, 50, 1) 0%, rgba(84, 45, 84, 1) 50%, rgba(74, 39, 74, 1) 61%, rgba(64, 33, 64, 1) 75%, rgba(37, 29, 37, 1) 100%);
+    background : linear-gradient(170deg, rgba(50, 21, 50, 1) 0%, rgba(84, 45, 84, 1) 50%, rgba(74, 39, 74, 1) 61%, rgba(64, 33, 64, 1) 75%, rgba(37, 29, 37, 1) 100%);
+}
+
+#footer h3.footerHeader{
+    font-size:1em;
+    color:#a08ca0;
+}
+
+#footer h4{
+    font-weight: normal;
+    font-size: 1em;
+    margin: 14px 0 4px 0;
+    color: #42a247;
+}
+
+#footer p{
+    font-size:.9em;
+    margin: 4px 0 14px 0;
+}
+
+#footer .businessInfo h3.footerHeader{
+    margin-bottom:0;
+}
+
+#footer .BIcolumn{
+    float:left;
+    width:50%;
+}
+
+#footer .businessInfo{
+    width:40%;
+}
+
+#footer .sitemap{
+    width:18%;
+}
+
+#footer .sitemapLinks a{
+    font-size:1em;
+    font-weight:600;
+    color:#c78ec7;
+    line-height:1.5em;
+    cursor:pointer;
+}
+
+#footer .sitemapLinks a:hover{
+    color:#a243a2;
+}
+
+#footer .copyright{
+    clear:both;
+    padding-top:28px;
+    margin:0;
+    text-align:right;
+    font-size:.8em;
+}
