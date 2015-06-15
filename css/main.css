@@ -286,6 +286,7 @@ h3.heading{
     width:25%;
     max-width:105px;
     margin-bottom:30px;
+    border-radius:6px;
 }
 
 /*******CONTACT*******/
