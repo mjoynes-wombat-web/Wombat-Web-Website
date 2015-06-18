@@ -6,7 +6,10 @@ $(document).ready(function(){
 });
 
 /*SHOW PAGE FUNCTION*/
-function showPage(show, hide){
+function showPage(show){
+
+    var hide = document.querySelector('#nav ul.nav li a.active').parentNode.classList[0];
+
     if($('#' + show).hasClass('visible') || $('#' + hide).hasClass('visible')){
         if($('#' + show).hasClass('visible')){
 
