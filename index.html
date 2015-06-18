@@ -44,11 +44,11 @@
     <nav id="nav">
         <ul class="nav">
             <li class="home desktop"><a class="active" onclick="showHome();">Home</a></li><!--
-            --><li class="about desktop"><a onclick="showAbout();">About Us</a></li><!--
-            --><li class="contact desktop"><a  onclick="showContact();">Contact Us</a></li><!--
+            --><li class="about desktop"><a onclick="showPage('about', 'contact');">About Us</a></li><!--
+            --><li class="contact desktop"><a  onclick="showPage('contact', 'about');">Contact Us</a></li><!--
             --><li class="home mobile"><a class="active" onclick="showHome();">Home</a></li><!--
-            --><li class="about mobile"><a onclick="showAbout();">About</a></li><!--
-            --><li class="contact mobile"><a  onclick="showContact();">Contact</a></li>
+            --><li class="about mobile"><a onclick="showPage('about', 'contact');">About</a></li><!--
+            --><li class="contact mobile"><a  onclick="showPage('contact', 'about');">Contact</a></li>
         </ul>
     </nav><!--END NAVIGATION-->
 </header><!--END HOME-->
@@ -236,7 +236,7 @@
                 </tr>
                 <tr>
                     <td>Holidays</td>
-                    <td><a onclick="showContact()" href="#calendar">See Calendar</a></td>
+                    <td><a onclick="showPage('contact', 'about')" href="#calendar">See Calendar</a></td>
                 </tr>
             </table>
         </section><!--END HOURS-->
@@ -246,8 +246,8 @@
         <h3 class="footerHeader">Sitemap</h3>
         <p class="sitemapLinks">
             <a onclick="showHome()">Home</a><br>
-            <a onclick="showAbout()">About Us</a><br>
-            <a onclick="showContact()">Contact Us</a>
+            <a onclick="showPage('about', 'contact')">About Us</a><br>
+            <a onclick="showPage('contact', 'about')">Contact Us</a>
         </p>
     </aside><!--END SITEMAP-->
     <!--COPYRIGHT-->
