@@ -71,6 +71,7 @@ body{
 }
 
     /*LOGO*/
+
     #logo{
         width:12.9%;
         min-width: 198px;
@@ -185,6 +186,7 @@ body{
     margin:0;;
     vertical-align:middle;
     float:left;
+    cursor: pointer;
 }
 
 #logotext.topMenu{
@@ -195,6 +197,7 @@ body{
     vertical-align:middle;
     float:left;
     padding-top:.9%;
+    cursor: pointer;
 }
 
 #nav.topMenu{
