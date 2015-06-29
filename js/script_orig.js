@@ -8,7 +8,7 @@ $(document).ready(function(){
 /*SHOW PAGE FUNCTION*/
 function showPage(show){
 
-    var hide = document.querySelector('#navTopMenu ul.nav li a.active').parentNode.classList[0];
+    var hide = document.querySelector('#nav ul.nav li a.active').parentNode.classList[0];
 
     if($('#' + show).hasClass('visible') || $('#' + hide).hasClass('visible')){
         if($('#' + show).hasClass('visible')){
@@ -22,14 +22,14 @@ function showPage(show){
                     $(this).dequeue();
                 });
 
-            changeActive('#navTopMenu ul li.' + show + ' a', '#nav ul li.home a', '#navTopMenu ul li.' + hide + ' a');
+            changeActive('#nav ul li.' + show + ' a', '#nav ul li.home a', '#nav ul li.' + hide + ' a');
 
         }
     }else {
         hideHome();
         moveMenuTop();
 
-        changeActive('#navTopMenu ul li.' + show + ' a', '#nav ul li.home a', '#navTopMenu ul li.' + hide + ' a');
+        changeActive('#nav ul li.' + show + ' a', '#nav ul li.home a', '#nav ul li.' + hide + ' a');
 
         showMenuTop();
 
@@ -64,32 +64,33 @@ function changeActive(active, inactive1, inactive2){
 
 /*HIDE HOME*/
 function hideHome(){
-    $('#header').fadeToggle(600);
+    $('#greenLine').fadeToggle(600);
+    $('#mission').fadeToggle(600);
     $('#siteWrapper').fadeToggle(600);
 }
 
 /*MOVE MENU TOP*/
 function moveMenuTop() {
-    //$('#header').delay(600)
-    //    .queue(function () {
-    //        $(this).addClass('topMenu');
-    //        $(this).dequeue();
-    //    });
-    //$('#logo').delay(600)
-    //    .queue(function () {
-    //        $(this).addClass('topMenu');
-    //        $(this).dequeue();
-    //    });
-    //$('#logotext').delay(600)
-    //    .queue(function () {
-    //        $(this).addClass('topMenu');
-    //        $(this).dequeue();
-    //    });
-    //$('#nav').delay(600)
-    //    .queue(function () {
-    //        $(this).addClass('topMenu');
-    //        $(this).dequeue();
-    //    });
+    $('#header').delay(600)
+        .queue(function () {
+            $(this).addClass('topMenu');
+            $(this).dequeue();
+        });
+    $('#logo').delay(600)
+        .queue(function () {
+            $(this).addClass('topMenu');
+            $(this).dequeue();
+        });
+    $('#logotext').delay(600)
+        .queue(function () {
+            $(this).addClass('topMenu');
+            $(this).dequeue();
+        });
+    $('#nav').delay(600)
+        .queue(function () {
+            $(this).addClass('topMenu');
+            $(this).dequeue();
+        });
     $('#siteWrapper').delay(600)
         .queue(function () {
             $(this).addClass('content');
@@ -99,8 +100,8 @@ function moveMenuTop() {
 
 /*SHOW MENU TOP*/
 function showMenuTop(){
-    $('#siteWrapper').delay(600).fadeToggle(600);
     $('#main').delay(600).fadeToggle(600);
+    $('#siteWrapper').fadeToggle(600);
     $('#footer').delay(600).fadeToggle(600);
 }
 
@@ -112,29 +113,21 @@ function showHome() {
     if($('#about').hasClass('visible') || $('#contact').hasClass('visible')){
         if($('#about').hasClass('visible')){
             $('#about').fadeToggle(600).removeClass('visible');
-            $('#navTopMenu ul li.about a').delay(600)
+            $('#nav ul li.about a').delay(600)
                 .queue(function () {
                     $(this).removeClass('active');
                     $(this).dequeue();
                 });
         }else if($('#contact').hasClass('visible')){
             $('#contact').fadeToggle(600).removeClass('visible');
-            $('#navTopMenu ul li.contact a').delay(600)
+            $('#nav ul li.contact a').delay(600)
                 .queue(function () {
                     $(this).removeClass('active');
                     $(this).dequeue();
                 });
         }
 
-        $('#siteWrapper').fadeToggle(600).delay(600)
-            .queue(function () {
-                $(this).removeClass('content');
-                $('#header').removeAttr('style');
-                $(this).fadeToggle(600);
-                $(this).dequeue();
-            });
-        $('#main').fadeToggle(600);
-        $('#footer').fadeToggle(600);
+        showMenuTop();
 
         $('#nav ul li.home a').delay(600)
             .queue(function () {
@@ -142,10 +135,37 @@ function showHome() {
                 $(this).dequeue();
             });
 
-        $('#navTopMenu ul li.home a').delay(600)
+        $('#header').delay(600)
             .queue(function () {
-                $(this).addClass('active');
+                $(this).removeClass('topMenu');
                 $(this).dequeue();
             });
+        $('#logo').delay(600)
+            .queue(function () {
+                $(this).removeClass('topMenu');
+                $(this).dequeue();
+            });
+        $('#logotext').delay(600)
+            .queue(function () {
+                $(this).removeClass('topMenu');
+                $(this).dequeue();
+            });
+        $('#nav').delay(600)
+            .queue(function () {
+                $(this).removeClass('topMenu');
+                $(this).dequeue();
+            });
+        $('#siteWrapper').delay(600)
+            .queue(function () {
+                $(this).removeClass('content');
+                $(this).dequeue();
+            });
+
+        $('#greenLine').delay(600).fadeToggle(600);
+        $('#mission').delay(600).fadeToggle(600);
+        $('#nav').delay(600).fadeToggle(600);
+        $('#logo').delay(600).fadeToggle(600);
+        $('#logotext').delay(600).fadeToggle(600);
+        $('#siteWrapper').delay(600).fadeToggle(600);
     }
 }

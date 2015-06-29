@@ -1,0 +1,50 @@
+body {
+    min-width:320px;
+    min-height:480px;
+}
+
+#siteWrapper{
+    min-width: 320px;
+    min-height: 480px;
+    display:table;
+    position:absolute;
+    height:100%;
+    width:100%;
+}
+
+#header{
+    min-width:320px;
+    min-height:480px;
+    height:100%;
+    top:0;
+    display:table-cell;
+    vertical-align: middle;
+}
+
+#logoMission{
+}
+
+#mission{
+    min-width:280px;
+    font-size:.9em;
+    margin-top:15px;
+    width:87.5%;
+    line-height:1.2em;
+    padding-bottom:13%;
+}
+
+#logo{
+    width:50%;
+    min-width:160px;
+}
+
+#logotext{
+    width:63%;
+    min-width:200px;
+}
+
+#greenLine{
+    width:260px;
+    background-size: contain;
+    margin-top:15px;
+}

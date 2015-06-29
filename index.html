@@ -33,11 +33,9 @@
 <div id="siteWrapper">
 <!-- HOME -->
 <header id="header" class="sectionWrapper">
-    <div id="#logoWrapper">
         <img src="images/logo/Wombat-Web-Designs-Logo_wombat.png" alt="Wombat Logo" id="logo" onclick="showHome()">
         <img src="images/logo/Wombat-Web-Designs-Logo_text.png" alt="Wombat Web Design" id="logotext" onclick="showHome()">
         <h1 id="coName">Wombat WEB DESIGN</h1>
-    </div>
     <p id="greenLine">Green Line</p>
     <p id="mission">Our goal is to provide excellent front-end web design that integrates beautifully with back-end programming: giving a straightforward, intuitive, responsive, and classy experience. We present this with an excellent customer experience and a focus on the public’s needs.</p>
     <!--NAVIGATION-->
@@ -55,6 +53,29 @@
 
 <!--MAIN CONTENT-->
     <main id="main">
+        <div id="headerTopMenuWrapper">
+            <header id="headerTopMenu" class="sectionWrapper">
+                <div id="logoTopMenuWrapper">
+                    <img src="images/logo/Wombat-Web-Designs-Logo_wombat.png" alt="Wombat Logo" id="logoTopMenu" onclick="showHome()">
+                </div>
+                <div id="logotextTopMenuWrapper">
+                    <img src="images/logo/Wombat-Web-Designs-Logo_text.png" alt="Wombat Web Design" id="logotextTopMenu" onclick="showHome()">
+                </div>
+                <!--NAVIGATION-->
+                <div id="navTopMenuWrapper">
+                    <nav id="navTopMenu">
+                        <ul class="nav">
+                            <li class="home desktop"><a class="active" onclick="showHome();">Home</a></li><!--
+                    --><li class="about desktop"><a onclick="showPage('about');">About Us</a></li><!--
+                    --><li class="contact desktop"><a  onclick="showPage('contact');">Contact Us</a></li><!--
+                    --><li class="home mobile"><a class="active" onclick="showHome();">Home</a></li><!--
+                    --><li class="about mobile"><a onclick="showPage('about');">About</a></li><!--
+                    --><li class="contact mobile"><a  onclick="showPage('contact');">Contact</a></li>
+                        </ul>
+                    </nav><!--END NAVIGATION-->
+                </div>
+            </header><!--END HEADER-->
+        </div>
     <!-- ABOUT -->
     <article id="about" class="sectionWrapper">
         <!--VISION-->

@@ -1,3 +1,7 @@
+@media screen and (max-width:960px){
+    @import "mobile.css";
+}
+
 /*******General*******/
 
 html, body{
@@ -30,6 +34,9 @@ body{
     background: url("../images/pinstripe.png") repeat, linear-gradient(150deg, rgba(50, 21, 50, 1) 0%, rgba(84, 45, 84,1) 50%, rgba(74,39,74,1) 61%, rgba(64,33,64,1) 75%, rgba(37,29,37,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#331333', endColorstr='#261e26', GradientType=1 );
     overflow:visible;
+    display:table;
+    position:absolute;
+    width:100%;
 }
 
     /*TEXT*/
@@ -58,16 +65,16 @@ body{
         color:#a243a2;
     }
 
-/*******HEADER*******/
+/*******Header*******/
 
 #header{
     width:100%;
     min-width:980px;
     min-height:574px;
-    height:82%;
-    top:18%;
     position:relative;
-
+    display:table-cell;
+    vertical-align: middle;
+    padding-bottom:64px;
 }
 
     /*LOGO*/
@@ -116,13 +123,13 @@ body{
 
 /********NAVIGATION*******/
 
-#nav{
+#nav, #navTopMenu{
     width:100%;
     position:absolute;
     bottom:0;
 }
 
-#nav ul{
+#nav ul, #navTopMenu ul{
     list-style: none;
     margin:0;
     padding:0;
@@ -136,12 +143,12 @@ body{
     box-shadow: 0 -3px 10px 0 rgba(0,0,0,0.3);
 }
 
-#nav ul li{
+#nav ul li, #navTopMenu ul li{
     display:inline-block;
     width:33.33333%;
 }
 
-#nav ul li a, #nav ul li a:hover{
+#nav ul li a, #nav ul li a:hover, #navTopMenu ul li a, #navTopMenu ul li a:hover{
     color:#fff;
     display:inline-block;
     width:100%;
@@ -153,77 +160,96 @@ body{
     cursor:pointer;
 }
 
-#nav ul li a:hover, #nav ul li a.active:hover{
+#nav ul li a:hover, #nav ul li a.active:hover, #navTopMenu ul li a:hover, #navTopMenu ul li a.active:hover{
     background-color: rgba(0, 0, 0, 0.2);
 }
 
-#nav ul li a.active{
+#nav ul li a.active, #navTopMenu ul li a.active{
     background-color: rgba(0, 0, 0, 0.4);
 }
 
     /*MOBILE*/
-    #nav ul li.mobile{
+    #nav ul li.mobile, #navTopMenu ul li.mobile{
         display:none;
     }
 
 /********MAIN*******/
 
-#header.topMenu{
-    position:static;
-    min-height:123px;
-    height:auto;
-    top:auto;
-    padding-top:2.7%;
-    vertical-align:middle;
-    overflow:visible;
+#headerTopMenuWrapper{
+    display:table;
+    width:97.5%;
+    padding-left:2.5%;
 }
 
-#logo.topMenu{
+#headerTopMenu{
+    min-height:123px;
+    display:table-row;
+    width:100%;
+}
+
+#logoTopMenuWrapper{
+    display:table-cell;
+    vertical-align: middle;
     width:9.39%;
+    min-width:112px;
+    max-width:152px;
+}
+
+#logoTopMenu{
+    width:82%;
+    margin:0;
+    cursor: pointer;
+    float:right;
     min-width:92px;
     max-width:152px;
-    padding-left:2.7%;
-    margin:0;;
-    vertical-align:middle;
-    float:left;
-    cursor: pointer;
 }
 
-#logotext.topMenu{
+#logotextTopMenuWrapper{
+    display:table-cell;
+    vertical-align: middle;
     width:18.87%;
+    min-width:205px;
+    max-width:306px;
+}
+
+#logotextTopMenu{
+    width:90%;
+    margin:0;
+    cursor: pointer;
     min-width:185px;
     max-width:306px;
-    margin:0;
-    vertical-align:middle;
-    float:left;
-    padding-top:.9%;
-    cursor: pointer;
 }
 
-#nav.topMenu{
-    width:65.04%;
-    min-width:650px;
+#navTopMenuWrapper{
+    display:table-cell;
+    vertical-align: middle;
+    width:67.04%;
+    min-width:638px;
+}
+
+#navTopMenu{
+    width:100%;
     position:static;
     bottom:auto;
     vertical-align:middle;
     text-align:right;
     display:inline-block;
     float:right;
-    padding-top:2%;
+    min-width:638px;
 
 }
-#nav.topMenu ul{
+#navTopMenu ul{
     box-shadow: 0 3px 10px 0 rgba(0,0,0,0.3);
     border-bottom-left-radius: 24px;
     border-top-left-radius: 24px;
 }
 
-#nav.topMenu ul li.home a{
+#navTopMenu ul li.home a, #navTopMenu ul li.home a:focus{
     border-bottom-left-radius: 24px;
     border-top-left-radius: 24px;
 }
 
-#nav.topMenu ul li a{
+#navTopMenu ul li a, #navTopMenu ul li a:hover{
     padding:4% 0;
 }
 
@@ -240,11 +266,11 @@ body{
 }
 
 #main{
-    width:95%;
+    width:100%;
     min-width:868px;
-    padding:2.5%;
     overflow:auto;
-    min-height:450px;
+    min-height:550px;
+    padding:2.5% 0;
 }
 
 .column{
@@ -267,7 +293,8 @@ h3.heading{
 /*******ABOUT*******/
 
 #about{
-    overflow:auto;
+    clear:both;
+    padding:0 2.5%;
 }
 
 #staff h4, #staff p{
@@ -293,6 +320,11 @@ h3.heading{
 }
 
 /*******CONTACT*******/
+
+#contact{
+    clear:both;
+    padding:0 2.5%;
+}
 
 p.contactText{
     margin:4px 0 14px 0;
