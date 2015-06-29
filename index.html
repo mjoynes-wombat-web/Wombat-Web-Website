@@ -40,13 +40,16 @@
     <p id="mission">Our goal is to provide excellent front-end web design that integrates beautifully with back-end programming: giving a straightforward, intuitive, responsive, and classy experience. We present this with an excellent customer experience and a focus on the public’s needs.</p>
     <!--NAVIGATION-->
     <nav id="nav">
-        <ul class="nav">
-            <li class="home desktop"><a class="active" onclick="showHome();">Home</a></li><!--
-            --><li class="about desktop"><a onclick="showPage('about');">About Us</a></li><!--
-            --><li class="contact desktop"><a  onclick="showPage('contact');">Contact Us</a></li><!--
-            --><li class="home mobile"><a class="active" onclick="showHome();">Home</a></li><!--
-            --><li class="about mobile"><a onclick="showPage('about');">About</a></li><!--
-            --><li class="contact mobile"><a  onclick="showPage('contact');">Contact</a></li>
+        <ul class="nav"><!--
+        --><li class="home desktop"><a class="active" onclick="showHome();">Home</a></li><!--
+        --><li class="about desktop"><a onclick="showPage('about');">About Us</a></li><!--
+        --><li class="contact desktop"><a  onclick="showPage('contact');">Contact Us</a></li><!--
+        --><li class="menu mobile"><a onclick="mobileMenu();"><img src="images/mobile-menu.png"></a></li>
+        </ul>
+        <ul class="mobileNav"><!--
+        --><li class="home mobile"><a class="active" onclick="showHome();">Home</a></li><!--
+        --><li class="about mobile"><a onclick="showPage('about');">About</a></li><!--
+        --><li class="contact mobile"><a  onclick="showPage('contact');">Contact</a></li>
         </ul>
     </nav><!--END NAVIGATION-->
 </header><!--END HOME-->
@@ -64,13 +67,16 @@
                 <!--NAVIGATION-->
                 <div id="navTopMenuWrapper">
                     <nav id="navTopMenu">
-                        <ul class="nav">
-                            <li class="home desktop"><a class="active" onclick="showHome();">Home</a></li><!--
-                    --><li class="about desktop"><a onclick="showPage('about');">About Us</a></li><!--
-                    --><li class="contact desktop"><a  onclick="showPage('contact');">Contact Us</a></li><!--
-                    --><li class="home mobile"><a class="active" onclick="showHome();">Home</a></li><!--
-                    --><li class="about mobile"><a onclick="showPage('about');">About</a></li><!--
-                    --><li class="contact mobile"><a  onclick="showPage('contact');">Contact</a></li>
+                        <ul class="nav"><!--
+                        --><li class="home desktop"><a class="active" onclick="showHome();">Home</a></li><!--
+                        --><li class="about desktop"><a onclick="showPage('about');">About Us</a></li><!--
+                        --><li class="contact desktop"><a  onclick="showPage('contact');">Contact Us</a></li><!--
+                        --><li class="menu mobile"><a onclick="mobileMenu();"><img src="images/mobile-menu.png"></a></li>
+                        </ul>
+                        <ul class="mobileNav"><!--
+                            --><li class="home mobile"><a class="active" onclick="showHome();">Home</a></li><!--
+                            --><li class="about mobile"><a onclick="showPage('about');">About</a></li><!--
+                            --><li class="contact mobile"><a  onclick="showPage('contact');">Contact</a></li>
                         </ul>
                     </nav><!--END NAVIGATION-->
                 </div>

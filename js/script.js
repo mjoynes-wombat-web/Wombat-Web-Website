@@ -70,26 +70,6 @@ function hideHome(){
 
 /*MOVE MENU TOP*/
 function moveMenuTop() {
-    //$('#header').delay(600)
-    //    .queue(function () {
-    //        $(this).addClass('topMenu');
-    //        $(this).dequeue();
-    //    });
-    //$('#logo').delay(600)
-    //    .queue(function () {
-    //        $(this).addClass('topMenu');
-    //        $(this).dequeue();
-    //    });
-    //$('#logotext').delay(600)
-    //    .queue(function () {
-    //        $(this).addClass('topMenu');
-    //        $(this).dequeue();
-    //    });
-    //$('#nav').delay(600)
-    //    .queue(function () {
-    //        $(this).addClass('topMenu');
-    //        $(this).dequeue();
-    //    });
     $('#siteWrapper').delay(600)
         .queue(function () {
             $(this).addClass('content');
@@ -149,3 +129,32 @@ function showHome() {
             });
     }
 }
+
+/*******MOBILE*******/
+
+/*SHOW MOBILE MENU*/
+
+function mobileMenu(){
+    $('#nav ul.nav').fadeToggle(300);
+    $('#nav').delay(400).queue(function(){
+        $(this).addClass('open');
+        $(this).dequeue();
+    });
+    $('#nav ul.mobileNav').delay(400).animate({width:'toggle'}, 600);
+}
+
+$(document).mouseup(function (e)
+{
+    var container = $("#nav ul.mobileNav");
+
+    if ((!container.is(e.target) // if the target of the click isn't the container...
+        && container.has(e.target).length === 0) && $('#nav').hasClass('open')) // ... nor a descendant of the container
+    {
+        container.animate({width:'toggle'}, 600);
+        $('#nav').delay(700).queue(function(){
+            $(this).removeClass('open');
+            $(this).dequeue();
+        });
+        $('#nav ul.nav').delay(700).fadeToggle(300);
+    }
+});

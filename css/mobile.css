@@ -19,6 +19,12 @@ body {
     top:0;
     display:table-cell;
     vertical-align: middle;
+    padding:0;
+}
+
+#nav{
+    top:0;
+    bottom:inherit;
 }
 
 #logoMission{
@@ -30,7 +36,6 @@ body {
     margin-top:15px;
     width:87.5%;
     line-height:1.2em;
-    padding-bottom:13%;
 }
 
 #logo{
@@ -47,4 +52,66 @@ body {
     width:260px;
     background-size: contain;
     margin-top:15px;
+}
+
+#nav{
+    width:auto;
+    border-bottom-right-radius: 32px;
+}
+
+#nav.open{
+    height:100%;
+    width:50%;
+}
+
+#nav ul.nav{
+    border-bottom-right-radius: 32px;
+}
+
+#nav ul ul{
+    box-shadow: none;
+}
+
+#nav ul li.mobile, #navTopMenu ul li.mobile{
+    display:inline-block;
+}
+
+#nav ul li.desktop, #navTopMenu ul li.desktop{
+    display:none;
+}
+
+#nav ul li.menu{
+    width:100%;
+}
+
+#nav ul li.menu a, #navTopMenu ul li.menu a{
+    padding:0;
+    border-bottom-right-radius: 32px;
+}
+
+#nav ul.mobileNav{
+    display:none;
+    height:100%;
+    width:100%;
+}
+
+#nav ul li.menu ul{
+    display:none;
+    height:100%;
+    width:auto;
+}
+
+#nav ul.mobileNav li{
+    display:block;
+    width:100%;
+}
+
+#nav ul.mobileNav li a{
+    text-align:left;
+    padding:18px 10%;
+    width:80%;
+}
+
+#nav ul li.menu a{
+    width:auto;
 }
