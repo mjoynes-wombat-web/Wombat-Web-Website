@@ -134,27 +134,48 @@ function showHome() {
 
 /*SHOW MOBILE MENU*/
 
-function mobileMenu(){
-    $('#nav ul.nav').fadeToggle(300);
-    $('#nav').delay(400).queue(function(){
+function showMobileMenu(menu){
+    $(menu + ' ul.nav').fadeOut(300);
+    $(menu).delay(400).queue(function(){
         $(this).addClass('open');
         $(this).dequeue();
     });
-    $('#nav ul.mobileNav').delay(400).animate({width:'toggle'}, 600);
+    $(menu + ' ul.mobileNav').delay(400).animate({width:'show'}, 600);
 }
 
-$(document).mouseup(function (e)
-{
-    var container = $("#nav ul.mobileNav");
+function hideMobileMenu(container, subContainer){
+    $(subContainer).animate({width:'hide'}, 600);
+    $(container).delay(700).queue(function(){
+        $(this).removeClass('open');
+        $(this).dequeue();
+    });
+    $(container + ' ul.nav').delay(700).fadeIn(300);
+}
 
-    if ((!container.is(e.target) // if the target of the click isn't the container...
-        && container.has(e.target).length === 0) && $('#nav').hasClass('open')) // ... nor a descendant of the container
-    {
-        container.animate({width:'toggle'}, 600);
-        $('#nav').delay(700).queue(function(){
-            $(this).removeClass('open');
-            $(this).dequeue();
-        });
-        $('#nav ul.nav').delay(700).fadeToggle(300);
-    }
+$(document).mouseup(function (e){
+    clickOff(e, "#navTopMenu");
 });
+
+$(document).mouseup(function (e){
+    clickOff(e, "#nav");
+});
+
+function clickOff(e, container)
+{
+    var subContainer = container + " ul.mobileNav";
+
+    if ((!$(subContainer).is(e.target) // if the target of the click isn't the container...
+        && $(subContainer).has(e.target).length === 0) && $(container).hasClass('open')) // ... nor a descendant of the container
+    {
+        hideMobileMenu(container, subContainer);
+    }
+}
+
+
+var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
+
+console.log(isTouch);
+
+if(isTouch){
+    $('<link rel="stylesheet" type="text/css" href="./css/mobile.css">').appendTo('head');
+}

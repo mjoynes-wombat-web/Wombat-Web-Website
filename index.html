@@ -9,9 +9,7 @@
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Overlock+SC|Overlock:400,700,900,400italic,700italic,900italic|Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800|Open+Sans+Condensed:300,300italic,700">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="icon" type="image/png" href="images/favicon/Wombat-Web-Designs-Logo.png">
-    <style type="text/css">
-        @import url(./css/mobile.css) screen and (max-device-width:500px);
-    </style>
+    <link rel="stylesheet" type="text/css" media="only screen and (max-device-width:1023px)" href="./css/mobile.css">
     <!--[if lt IE 9]>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script>
     <![endif]-->
@@ -44,12 +42,12 @@
         --><li class="home desktop"><a class="active" onclick="showHome();">Home</a></li><!--
         --><li class="about desktop"><a onclick="showPage('about');">About Us</a></li><!--
         --><li class="contact desktop"><a  onclick="showPage('contact');">Contact Us</a></li><!--
-        --><li class="menu mobile"><a onclick="mobileMenu();"><img src="images/mobile-menu.png"></a></li>
+        --><li class="menu mobile"><a onclick="showMobileMenu('#nav');"><img src="images/mobile-menu.png"></a></li>
         </ul>
         <ul class="mobileNav"><!--
         --><li class="home mobile"><a class="active" onclick="showHome();">Home</a></li><!--
-        --><li class="about mobile"><a onclick="showPage('about');">About</a></li><!--
-        --><li class="contact mobile"><a  onclick="showPage('contact');">Contact</a></li>
+        --><li class="about mobile"><a onclick="showPage('about'); hideMobileMenu('#nav', '#nav ul.mobileNav');">About</a></li><!--
+        --><li class="contact mobile"><a  onclick="showPage('contact'); hideMobileMenu('#nav', '#nav ul.mobileNav');">Contact</a></li>
         </ul>
     </nav><!--END NAVIGATION-->
 </header><!--END HOME-->
@@ -71,12 +69,12 @@
                         --><li class="home desktop"><a class="active" onclick="showHome();">Home</a></li><!--
                         --><li class="about desktop"><a onclick="showPage('about');">About Us</a></li><!--
                         --><li class="contact desktop"><a  onclick="showPage('contact');">Contact Us</a></li><!--
-                        --><li class="menu mobile"><a onclick="mobileMenu();"><img src="images/mobile-menu.png"></a></li>
+                        --><li class="menu mobile"><a onclick="showMobileMenu('#navTopMenu');"><img src="images/mobile-menu.png"></a></li>
                         </ul>
                         <ul class="mobileNav"><!--
-                            --><li class="home mobile"><a class="active" onclick="showHome();">Home</a></li><!--
-                            --><li class="about mobile"><a onclick="showPage('about');">About</a></li><!--
-                            --><li class="contact mobile"><a  onclick="showPage('contact');">Contact</a></li>
+                            --><li class="home mobile"><a class="active" onclick="showHome(); hideMobileMenu('#navTopMenu', '#navTopMenu ul.mobileNav');">Home</a></li><!--
+                            --><li class="about mobile"><a onclick="showPage('about'); hideMobileMenu('#navTopMenu', '#navTopMenu ul.mobileNav');">About</a></li><!--
+                            --><li class="contact mobile"><a  onclick="showPage('contact'); hideMobileMenu('#navTopMenu', '#navTopMenu ul.mobileNav');">Contact</a></li>
                         </ul>
                     </nav><!--END NAVIGATION-->
                 </div>

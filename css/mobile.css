@@ -1,3 +1,20 @@
+@media screen and (max-width: 800px) {
+    #mission{
+        min-width:280px;
+        font-size:.9em;
+        margin-top:15px;
+        width:87.5%;
+        line-height:1.2em;
+    }
+
+    #greenLine{
+        width:260px;
+        background-size: contain;
+        margin-top:15px;
+    }
+}
+
+
 body {
     min-width:320px;
     min-height:480px;
@@ -12,7 +29,7 @@ body {
     width:100%;
 }
 
-#header{
+#header, #headerTopMenu{
     min-width:320px;
     min-height:480px;
     height:100%;
@@ -22,20 +39,26 @@ body {
     padding:0;
 }
 
-#nav{
+#navTopMenuWrapper {
+    display: block;
+    position:absolute;
+    top:0;
+    left:0;
+    width:50%;
+    height:100%;
+    min-width:66px;
+}
+
+#nav, #navTopMenu{
     top:0;
     bottom:inherit;
+    width:auto;
+    border-bottom-right-radius: 32px;
+    float:left;
+    min-width:66px;
 }
 
 #logoMission{
-}
-
-#mission{
-    min-width:280px;
-    font-size:.9em;
-    margin-top:15px;
-    width:87.5%;
-    line-height:1.2em;
 }
 
 #logo{
@@ -48,39 +71,35 @@ body {
     min-width:200px;
 }
 
-#greenLine{
-    width:260px;
-    background-size: contain;
-    margin-top:15px;
-}
-
-#nav{
-    width:auto;
-    border-bottom-right-radius: 32px;
-}
-
 #nav.open{
     height:100%;
     width:50%;
 }
 
-#nav ul.nav{
+#navTopMenu.open{
+    height:100%;
+    width:100%;
+}
+
+#nav ul.nav, #navTopMenu ul.nav{
+    border-radius:0;
     border-bottom-right-radius: 32px;
 }
 
-#nav ul ul{
+#nav ul ul, #navTopMenu ul ul{
     box-shadow: none;
 }
 
 #nav ul li.mobile, #navTopMenu ul li.mobile{
     display:inline-block;
+    min-width:66px;
 }
 
 #nav ul li.desktop, #navTopMenu ul li.desktop{
     display:none;
 }
 
-#nav ul li.menu{
+#nav ul li.menu, #navTopMenu ul li.menu{
     width:100%;
 }
 
@@ -89,29 +108,33 @@ body {
     border-bottom-right-radius: 32px;
 }
 
-#nav ul.mobileNav{
+#nav ul.mobileNav, #navTopMenu ul.mobileNav{
     display:none;
     height:100%;
     width:100%;
 }
 
-#nav ul li.menu ul{
+#nav ul li.menu ul, #navTopMenu ul li.menu ul{
     display:none;
     height:100%;
     width:auto;
 }
 
-#nav ul.mobileNav li{
+#nav ul.mobileNav li, #navTopMenu ul.mobileNav li{
     display:block;
     width:100%;
 }
 
-#nav ul.mobileNav li a{
+#navTopMenu ul, #navTopMenu ul li.home a{
+    border-radius:0;
+}
+
+#nav ul.mobileNav li a, #navTopMenu ul.mobileNav li a{
     text-align:left;
     padding:18px 10%;
     width:80%;
 }
 
-#nav ul li.menu a{
+#nav ul li.menu a, #navTopMenu ul li.menu a{
     width:auto;
 }
