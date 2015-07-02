@@ -175,8 +175,6 @@ function clickOff(e, container)
 
 var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
 
-console.log(isTouch);
-
 if(isTouch){
     $('<link rel="stylesheet" type="text/css" href="./css/mobile.css">').appendTo('head');
 }
