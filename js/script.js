@@ -173,6 +173,7 @@ function clickOff(e, container)
 
 
 
+
 var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
 
 if(isTouch){
@@ -205,3 +206,29 @@ $(document).ready(function() {
         })
     }
 });
+
+function showSubMenu(element){
+    $('#nav ul.nav li' + element + ' a').addClass('open');
+    $('#nav ul' + element).animate({height:'show'}, 500);
+}
+
+function hideSubMenu(element){
+    $('#nav ul.nav li' + element + ' a').removeClass('open');
+    $('#nav ul' + element).animate({height:'hide'}, 500);
+}
+
+function hideOtherSubMenu(current){
+    if($('#nav ul.nav li a.open')){
+
+        var parentLi = $('#nav ul.nav li a.open').parent(),
+            submenu = '.' + parentLi[0].classList[0];
+
+        console.log(parentLi);
+
+        if(current != submenu) {
+            hideSubMenu(submenu);
+        }
+    }
+}
+
+

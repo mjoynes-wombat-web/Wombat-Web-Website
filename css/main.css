@@ -10,7 +10,7 @@ body{
     background-color: #333333;
     overflow:auto;
     min-width:980px;
-    min-height:700px;
+    min-height:650px;
 }
 
 .clear{
@@ -20,7 +20,7 @@ body{
 #siteWrapper{
     height: 100%;
     min-width:980px;
-    min-height:700px;
+    min-height:650px;
     background-color: #542d54;
     background: url("../images/pinstripe.png") repeat, #542D54;
     background: url("../images/pinstripe.png") repeat, -moz-linear-gradient(150deg, rgba(50, 21, 50, 1) 0%, rgba(84, 45, 84,1) 50%, rgba(74,39,74,1) 61%, rgba(64,33,64,1) 75%, rgba(37,29,37,1) 100%);
@@ -123,6 +123,8 @@ body{
     width:100%;
     position:absolute;
     bottom:0;
+    max-height:64px;
+    overflow:visible;
 }
 
 #nav ul, #navTopMenu ul{
@@ -141,7 +143,7 @@ body{
 
 #nav ul li, #navTopMenu ul li{
     display:inline-block;
-    width:33.33333%;
+    width:25%;
 }
 
 #nav ul li a, #nav ul li a:hover, #navTopMenu ul li a, #navTopMenu ul li a:hover{
@@ -163,6 +165,17 @@ body{
 #nav ul li a.active, #navTopMenu ul li a.active{
     background-color: rgba(0, 0, 0, 0.4);
 }
+
+#nav ul.services {
+    display: none;
+    width: 100%;
+    margin-top: -64px;
+}
+
+#nav ul.nav li a.open{
+    background-color:rgba(0, 0, 0, 0.2);
+}
+
 
     /*MOBILE*/
     #nav ul li.mobile, #navTopMenu ul li.mobile{
