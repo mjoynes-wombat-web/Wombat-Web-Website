@@ -8,6 +8,7 @@
     <title>Wombat Web Design</title>
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Overlock+SC|Overlock:400,700,900,400italic,700italic,900italic|Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800|Open+Sans+Condensed:300,300italic,700">
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/home.css">
     <link rel="icon" type="image/png" href="images/favicon/Wombat-Web-Designs-Logo.png">
     <link rel="stylesheet" type="text/css" media="only screen and (max-device-width:1023px)" href="./css/mobile.css">
     <!--[if lt IE 9]>
@@ -15,7 +16,7 @@
     <![endif]-->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
     <script type="text/javascript" src="js/script.js"></script>
-    <script type="text/javascript" src="js/portfolio.js"></script>
+    <script type="text/javascript" src="js/home.js"></script>
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
                     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -47,255 +48,28 @@
         --><li class="apparel desktop"><a>Apparel Design</a></li>
         </ul>
 
-        <ul class="nav"><!--
+        <ul class="nav main"><!--
         --><li class="home desktop"><a class="active" onmouseover="hideOtherSubMenu('.home');" onclick="showHome();">Home</a></li><!--
-        --><li class="services desktop"><a onmouseover="showSubMenu('.services'); hideOtherSubMenu('.services');">Services</a></li><!--
-        --><li class="about desktop"><a onmouseover="hideOtherSubMenu('.about');" onclick="showPage('about');">About Us</a></li><!--
-        --><li class="contact desktop"><a onmouseover="hideOtherSubMenu('.contact');" onclick="showPage('contact');">Contact Us</a></li><!--
-        --><li class="menu mobile"><a " onclick="showMobileMenu('#nav');"><img src="images/mobile-menu.png"></a></li>
+        --><li class="services desktop"><a onmouseover="showSubMenu('.services'); hideOtherSubMenu('.services');" onclick="showPage('services', 'Services');">Services</a></li><!--
+        --><li class="about desktop"><a onmouseover="hideOtherSubMenu('.about');" onclick="showPage('about', 'About Us');">About Us</a></li><!--
+        --><li class="contact desktop"><a onmouseover="hideOtherSubMenu('.contact');" onclick="showPage('contact', 'Contact Us');">Contact Us</a></li><!--
+        --><li class="menu mobile"><a onclick="showMobileMenu('#nav');"><img src="images/mobile-menu.png"></a></li>
         </ul>
         <ul class="mobileNav"><!--
         --><li class="home mobile"><a class="active" onclick="showHome();">Home</a></li><!--
         --><li class="services mobile"><a onclick="showPage('services');">Services</a><!--
-            --><ul class="services"><!--
-                    --><li><a>Web Design</a></li><!--
-                    --><li><a>Logo Design</a></li><!--
-                    --><li><a>Print Design</a></li><!--
-                    --><li><a>Apparel Design</a></li><!--
-            --></ul><!--
+            <!--&ndash;&gt;<ul class="services">&lt;!&ndash;-->
+                    <!--&ndash;&gt;<li><a>Web Design</a></li>&lt;!&ndash;-->
+                    <!--&ndash;&gt;<li><a>Logo Design</a></li>&lt;!&ndash;-->
+                    <!--&ndash;&gt;<li><a>Print Design</a></li>&lt;!&ndash;-->
+                    <!--&ndash;&gt;<li><a>Apparel Design</a></li>&lt;!&ndash;-->
+            <!--&ndash;&gt;</ul>&lt;!&ndash;-->
         --></li><!--
         --><li class="about mobile"><a onclick="showPage('about'); hideMobileMenu('#nav', '#nav ul.mobileNav');">About</a></li><!--
         --><li class="contact mobile"><a  onclick="showPage('contact'); hideMobileMenu('#nav', '#nav ul.mobileNav');">Contact</a></li>
         </ul>
     </nav><!--END NAVIGATION-->
 </header><!--END HOME-->
-
-<!--MAIN CONTENT-->
-    <main id="main">
-        <div id="headerTopMenuWrapper">
-            <header id="headerTopMenu" class="sectionWrapper">
-                <div id="logoTopMenuWrapper">
-                    <img src="images/logo/Wombat-Web-Designs-Logo_wombat.png" alt="Wombat Logo" id="logoTopMenu" onclick="showHome()">
-                </div>
-                <div id="logotextTopMenuWrapper">
-                    <img src="images/logo/Wombat-Web-Designs-Logo_text.png" alt="Wombat Web Design" id="logotextTopMenu" onclick="showHome()">
-                </div>
-                <!--NAVIGATION-->
-                <div id="navTopMenuWrapper">
-                    <nav id="navTopMenu">
-                        <ul class="nav"><!--
-                        --><li class="home desktop"><a class="active" onclick="showHome();">Home</a></li><!--
-                        --><li class="about desktop"><a onclick="showPage('about');">About Us</a></li><!--
-                        --><li class="contact desktop"><a  onclick="showPage('contact');">Contact Us</a></li><!--
-                        --><li class="menu mobile"><a onclick="showMobileMenu('#navTopMenu'); $('#navTopMenuWrapper').addClass('open');"><img src="images/mobile-menu.png"></a></li>
-                        </ul>
-                        <ul class="mobileNav"><!--
-                            --><li class="home mobile"><a class="active" onclick="showHome(); hideMobileMenu('#navTopMenu', '#navTopMenu ul.mobileNav');">Home</a></li><!--
-                            --><li class="about mobile"><a onclick="showPage('about'); hideMobileMenu('#navTopMenu', '#navTopMenu ul.mobileNav');">About</a></li><!--
-                            --><li class="contact mobile"><a  onclick="showPage('contact'); hideMobileMenu('#navTopMenu', '#navTopMenu ul.mobileNav');">Contact</a></li>
-                        </ul>
-                    </nav><!--END NAVIGATION-->
-                </div>
-            </header><!--END HEADER-->
-        </div>
-    <!-- ABOUT -->
-    <article id="about" class="sectionWrapper">
-        <!--VISION-->
-        <section id="vision" class="column">
-            <h1 class="columnHeading">Vision</h1>
-            <p class="columnText">At Wombat Web Design we hope to provide you with an experience that will leave you relaxed and confident that your needs are being met. We will communicate with you every step of the way to ensure that our aspirations are your goals. Quality, integrity, service, and communication are the cornerstones of our business and we strive to provide you with the same experience we would hope for in any worthy business.</p>
-            <p class="columnText">We design products that are classy and intuitive, but are still unique and memorable. With your vision and insight into your market, and our experience and understanding of customer's needs, as a team we know we can produce visuals that will bring customers to your door.</p>
-        </section><!--END VISION-->
-        <!--EXPERTISE-->
-        <section id="expertise" class="column">
-            <h1 class="columnHeading">Expertise</h1>
-            <p class="columnText">With our experience in web, print, apparel, and sign design we can provide unique designs that maintain your company's identity across multiple media types. What looks good on a screen may not work on a shirt or a sign. Working with a range of media has given our staff the ability to ensure quality and brand identification on whatever you produce.</p>
-        </section><!--END EXPERTISE-->
-        <!--STAFF-->
-        <section id="staff" class="column">
-            <h1 class="columnHeading">Staff</h1>
-            <img src="./images/staff/ssmith_sm.jpg" class="staffPhoto" alt="Simeon Smith">
-            <h4 class="staffName">Simeon Smith</h4>
-            <p class="columnText">As our owner and lead designer, Simeon Smith provides Wombat Web Design with direction. His oversight ensures satisfaction and quality for our customers. With almost a decade in the design industry, his experience in management and design ensures not only top quality web design but also designs that can be used for a wide range of media. We are here to help you design and produce whatever products you are looking for.</p>
-        </section><!--END STAFF-->
-    </article><!--END ABOUT-->
-
-
-    <!-- CONTACT -->
-    <article id="contact" class="sectionWrapper">
-        <!--CONTACT INFORMATION-->
-        <section id="contactInfo" class="column">
-            <h1 class="columnHeading">Contact Information</h1>
-            <h3 class="heading">Phone</h3>
-            <p class="contactText">1.209.975.7932</p>
-            <h3 class="heading">Email</h3>
-            <p class="contactText"><a href="mailto:info@wombatweb.us">info@wombatweb.us</a></p>
-            <h3 class="heading">Address</h3>
-            <p class="contactText">808 E. 6th Ave. #1<br>Ellensburg, WA 98926</p>
-        </section><!--END CONTACT INFORMATION-->
-        <!--CONTACT FORM-->
-        <section id="contactUs" class="column">
-            <h1 class="columnHeading">Contact Us</h1>
-            <form action="mailto:smsmith1@fullsail.edu" method="post">
-                <fieldset>
-                    <legend>This form is under construction, please send an email to <a href="mailto:info@wombatweb.us">info@wombatweb.us</a>.</legend>
-                    <p>
-                        <label class="title" for="name">Name:</label>
-                        <input type="text" name="name" id="name" placeholder="John Smith" required="required"><br>
-                        <label class="title" for="email">Email:</label>
-                        <input type="email" name="email" id="email" placeholder="jsmith@gmail.com" required="required">
-                        <label class="title subject" for="subject">Subject:</label>
-                        <input type="text" name="subject" placeholder="New Website" id="subject">
-                    </p>
-                    <p>
-                        <label for="category" class="title">Category:</label>
-                        <select name="category" id="category">
-                            <option value="gi">General Info.</option>
-                            <option value="pr">Pricing</option>
-                            <option value="lo">Locations</option>
-                            <option value="sf">Safety</option>
-                        </select>
-                    </p>
-                    <p>
-                        <label class="title" for="message">Message:</label>
-                        <textarea id="message" required="required"></textarea>
-                    </p>
-                </fieldset>
-                <div class="submit">
-                    <p id="reqDis">Indicates a required field.</p>
-                    <label for="emailCopy" class="emailCopy">Please send me a copy of the email.</label>
-                    <input type="checkbox" name="emailCopy" id="emailCopy">
-
-                    <input id="submit" type="submit" value="Send Message" onclick='confirmMsg()'>
-                </div>
-            </form>
-        </section><!--END CONTACT FORM-->
-        <!--HOURS-->
-        <section id="Hours" class="column">
-            <h1 class="columnHeading">Hours</h1>
-            <table class="contactHours">
-                <tr>
-                    <td>Sunday</td>
-                    <td>Closed</td>
-                </tr>
-                <tr>
-                    <td>Monday</td>
-                    <td>9:00-5:00</td>
-                </tr>
-                <tr>
-                    <td>Tuesday</td>
-                    <td>9:00-5:00</td>
-                </tr>
-                <tr>
-                    <td>Wednesday</td>
-                    <td>9:00-5:00</td>
-                </tr>
-                <tr>
-                    <td>Thursday</td>
-                    <td>9:00-5:00</td>
-                </tr>
-                <tr>
-                    <td>Friday</td>
-                    <td>9:00-5:00</td>
-                </tr>
-                <tr>
-                    <td>Saturday</td>
-                    <td>By Appt.</td>
-                </tr>
-                <tr>
-                    <td>Holidays</td>
-                    <td><a href="#calendar">See Calendar</a></td>
-                </tr>
-            </table>
-            <h1 id='calendar' class="columnHeading">Holiday Calendar</h1>
-            <table class="contactHours">
-                <tr>
-                    <td>May 25th</td>
-                    <td>Memorial Day<br>Closed</td>
-                </tr>
-                <tr>
-                    <td>June 5th</td>
-                    <td>Personal Day<br>Closed</td>
-                </tr>
-                <tr>
-                    <td>July 3rd</td>
-                    <td>Independence Day<br>Closed</td>
-                </tr>
-            </table>
-        </section><!--END HOURS-->
-    </article><!--END CONTACT-->
-</main><!--END MAIN CONTENT-->
-
-<!--FOOTER-->
-<footer id="footer">
-    <!--MISSION-->
-    <aside class="column mission">
-        <h3 class="footerHeader">Mission</h3>
-        <p class="footerMission">Our goal is to provide excellent front-end web design that integrates beautifully with back-end programming: giving a straightforward, intuitive, responsive, and classy experience. We present this with an excellent customer experience and a focus on the public’s needs.</p>
-    </aside><!--END MISSION-->
-    <!--BUSINESS INFORMAITON-->
-    <aside class="column businessInfo">
-        <h3 class="footerHeader">Business Information</h3>
-        <!--CONTACT INFO-->
-        <section class="BIcolumn">
-            <h4 class="footerHeader">Phone</h4>
-            <p class="BItext">1.209.975.7932</p>
-            <h4 class="footerHeader">Email</h4>
-            <p class="BItext"><a href="mailto:info@wombatweb.us">info@wombatweb.us</a> </p>
-            <h4 class="footerHeader">Address</h4>
-            <p class="BItext">808 E. 6th Ave. #1<br>Ellensburg, WA 98926</p>
-        </section><!--END CONTACT INFO-->
-        <!--HOURS-->
-        <section class="BIcolumn">
-            <h4 class="footerHeader">Hours</h4>
-            <table class="hours">
-                <tr>
-                    <td>Sunday</td>
-                    <td>Closed</td>
-                </tr>
-                <tr>
-                    <td>Monday</td>
-                    <td>9:00-5:00</td>
-                </tr>
-                <tr>
-                    <td>Tuesday</td>
-                    <td>9:00-5:00</td>
-                </tr>
-                <tr>
-                    <td>Wednesday</td>
-                    <td>9:00-5:00</td>
-                </tr>
-                <tr>
-                    <td>Thursday</td>
-                    <td>9:00-5:00</td>
-                </tr>
-                <tr>
-                    <td>Friday</td>
-                    <td>9:00-5:00</td>
-                </tr>
-                <tr>
-                    <td>Saturday</td>
-                    <td>By Appoint.</td>
-                </tr>
-                <tr>
-                    <td>Holidays</td>
-                    <td><a onclick="showPage('contact', 'about')" href="#calendar">See Calendar</a></td>
-                </tr>
-            </table>
-        </section><!--END HOURS-->
-    </aside><!--END BUSINESS INFORMATION-->
-    <!--SITEMAP-->
-    <aside class="column sitemap">
-        <h3 class="footerHeader">Sitemap</h3>
-        <p class="sitemapLinks">
-            <a onclick="showHome()">Home</a><br>
-            <a onclick="showPage('about')">About Us</a><br>
-            <a onclick="showPage('contact')">Contact Us</a>
-        </p>
-    </aside><!--END SITEMAP-->
-    <!--COPYRIGHT-->
-    <p class = "copyright">Copyright © 2015 <a href="http://www.wombatweb.us">Wombat Web Design®</a></p><!--END COPYRIGHT-->
-</footer><!--END FOOTER-->
 <div class="clear"></div>
 </div>
 </body>

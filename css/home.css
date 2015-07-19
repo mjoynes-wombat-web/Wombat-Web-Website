@@ -1,0 +1,147 @@
+/*******General*******/
+
+#siteWrapper{
+    background-color: #542d54;
+    background: url("../images/pinstripe.png") repeat, #542D54;
+    background: url("../images/pinstripe.png") repeat, -moz-linear-gradient(150deg, rgba(50, 21, 50, 1) 0%, rgba(84, 45, 84,1) 50%, rgba(74,39,74,1) 61%, rgba(64,33,64,1) 75%, rgba(37,29,37,1) 100%);
+    background: url("../images/pinstripe.png") repeat, -webkit-linear-gradient(150deg, rgba(50, 21, 50, 1) 0%, rgba(84, 45, 84,1) 50%, rgba(74,39,74,1) 61%, rgba(64,33,64,1) 75%, rgba(37,29,37,1) 100%);
+    background: url("../images/pinstripe.png") repeat, -o-linear-gradient(150deg, rgba(50, 21, 50, 1) 0%, rgba(84, 45, 84,1) 50%, rgba(74,39,74,1) 61%, rgba(64,33,64,1) 75%, rgba(37,29,37,1) 100%);
+    background: url("../images/pinstripe.png") repeat, -ms-linear-gradient(150deg, rgba(50, 21, 50, 1) 0%, rgba(84, 45, 84,1) 50%, rgba(74,39,74,1) 61%, rgba(64,33,64,1) 75%, rgba(37,29,37,1) 100%);
+    background: url("../images/pinstripe.png") repeat, linear-gradient(150deg, rgba(50, 21, 50, 1) 0%, rgba(84, 45, 84,1) 50%, rgba(74,39,74,1) 61%, rgba(64,33,64,1) 75%, rgba(37,29,37,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#331333', endColorstr='#261e26', GradientType=1 );
+}
+
+/*******Header*******/
+
+#header{
+    width:100%;
+    min-width:980px;
+    min-height:574px;
+    position:relative;
+    display:table-cell;
+    vertical-align: middle;
+    padding-bottom:64px;
+}
+
+    /*LOGO*/
+
+    #logo{
+        width:12.9%;
+        min-width: 198px;
+        max-width:248px;
+        margin:0 auto;
+        display:block;
+    }
+
+    #logotext{
+        text-indent:-999999px;
+        width:16.1%;
+        min-width:248px;
+        max-width:310px;
+        margin:0 auto;
+        display:block;
+    }
+
+    #coName{
+        text-indent:-999999px;
+        height:0px;
+        margin:0;
+        float:left;
+    }
+
+    /*MISSION*/
+    #greenLine{
+        text-indent:-99999px;
+        background:url('../images/green-line.png') no-repeat;
+        width:317px;
+        height:2px;
+        margin:35px auto 0 auto;
+    }
+
+    #mission{
+        font-size:1.1em;
+        text-align:center;
+        margin:25px auto 0 auto;
+        width:44%;
+        min-width:454px;
+        max-width:520px;
+    }
+
+    /*Larger Screen*/
+
+    @media screen and (min-width: 1921px) {
+        #logo{
+            max-width:310px;
+        }
+
+        #logotext{
+            max-width:388px;
+        }
+
+        #greenLine{
+            width:325px;
+        }
+
+        #mission{
+            font-size:1.4em;
+        }
+    }
+
+/********NAVIGATION*******/
+
+#nav{
+    width:100%;
+    position:absolute;
+    bottom:0;
+    max-height:64px;
+    overflow:visible;
+}
+
+#nav ul{
+    list-style: none;
+    margin:0;
+    padding:0;
+    background-color: #2f6230;
+    background: -moz-linear-gradient(-45deg, rgba(26,128,27,1) 0%, rgba(47,98,48,1) 100%);
+    background: -webkit-linear-gradient(-45deg, rgba(26,128,27,1) 0%, rgba(47,98,48,1) 100%);
+    background: -o-linear-gradient(-45deg, rgba(26,128,27,1) 0%, rgba(47,98,48,1) 100%);
+    background: -ms-linear-gradient(-45deg, rgba(26,128,27,1) 0%, rgba(47,98,48,1) 100%);
+    background: linear-gradient(-100deg, #3a933e 0%, #1e4020 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a801b', endColorstr='#2f6230', GradientType=1 );
+    box-shadow: 0 -3px 10px 0 rgba(0,0,0,0.3);
+}
+
+#nav ul li{
+    display:inline-block;
+    width:25%;
+}
+
+#nav ul li a, #nav ul li a:hover{
+    color:#fff;
+    display:inline-block;
+    width:100%;
+    text-align:center;
+    padding:18px 0;
+    font-size:1.3em;
+    font-weight:500;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.75);
+    cursor:pointer;
+}
+
+#nav ul li a:hover, #nav ul li a.active:hover{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#nav ul li a.active{
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#nav ul.services {
+    display: none;
+    width: 100%;
+    margin-top: -64px;
+}
+
+#nav ul.nav li a.open{
+    background-color:rgba(0, 0, 0, 0.2);
+}

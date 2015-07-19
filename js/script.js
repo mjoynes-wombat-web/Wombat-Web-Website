@@ -1,88 +1,42 @@
-$(document).ready(function(){
-    $('#main').hide();
-    $('#about').hide();
-    $('#contact').hide();
-    $('#footer').hide();
-});
-
-/*SHOW PAGE FUNCTION*/
-function showPage(show){
-
-    var hide = document.querySelector('#navTopMenu ul.nav li a.active').parentNode.classList[0];
-
-    if($('#' + show).hasClass('visible') || $('#' + hide).hasClass('visible')){
-        if($('#' + show).hasClass('visible')){
-
-        }else if($('#' + hide).hasClass('visible')){
-            $('#' + hide).fadeToggle(600).removeClass('visible');
-            $('#' + show).delay(600)
-                .queue(function () {
-                    $(this).fadeToggle(600);
-                    $(this).addClass('visible');
-                    $(this).dequeue();
-                });
-
-            changeActive('#navTopMenu ul li.' + show + ' a', '#nav ul li.home a', '#navTopMenu ul li.' + hide + ' a');
-
-        }
-    }else {
-        hideHome();
-        moveMenuTop();
-
-        changeActive('#navTopMenu ul li.' + show + ' a', '#nav ul li.home a', '#navTopMenu ul li.' + hide + ' a');
-
-        showMenuTop();
-
-        $('#' + show).fadeToggle(600).delay(600)
-            .queue(function () {
-                $(this).addClass('visible');
-                $(this).dequeue();
-            });
-
-
-    }
-}
-
 /*CHANGE ACTIVE MENU FUNCTION*/
-function changeActive(active, inactive1, inactive2){
-    $(active).delay(600)
+window.backPages = [];
+window.forwardPages = [];
+
+function changeActive(active){
+    $($('.' + active).siblings().children('a')).delay(600)
+        .queue(function () {
+            $(this).removeClass('active');
+            $(this).dequeue();
+        });
+
+    $('.' + active + ' a').delay(600)
         .queue(function () {
             $(this).addClass('active');
             $(this).dequeue();
         });
-    $(inactive1).delay(600)
-        .queue(function () {
-            $(this).removeClass('active');
-            $(this).dequeue();
-        });
-    $(inactive2).delay(600)
-        .queue(function () {
-            $(this).removeClass('active');
-            $(this).dequeue();
-        });
 }
 
-/*HIDE HOME*/
-function hideHome(){
-    $('#header').fadeToggle(600);
-    $('#siteWrapper').fadeToggle(600);
-}
-
-/*MOVE MENU TOP*/
-function moveMenuTop() {
-    $('#siteWrapper').delay(600)
-        .queue(function () {
-            $(this).addClass('content');
-            $(this).dequeue();
-        });
-}
-
-/*SHOW MENU TOP*/
-function showMenuTop(){
-    $('#siteWrapper').delay(600).fadeToggle(600);
-    $('#main').delay(600).fadeToggle(600);
-    $('#footer').delay(600).fadeToggle(600);
-}
+///*HIDE HOME*/
+//function hideHome(){
+//    $('#header').fadeToggle(600);
+//    $('#siteWrapper').fadeToggle(600);
+//}
+//
+///*MOVE MENU TOP*/
+//function moveMenuTop() {
+//    $('#siteWrapper').delay(600)
+//        .queue(function () {
+//            $(this).addClass('content');
+//            $(this).dequeue();
+//        });
+//}
+//
+///*SHOW MENU TOP*/
+//function showMenuTop(){
+//    $('#siteWrapper').delay(600).fadeToggle(600);
+//    $('#main').delay(600).fadeToggle(600);
+//    $('#footer').delay(600).fadeToggle(600);
+//}
 
 
 /*******HOME********/
@@ -130,103 +84,152 @@ function showHome() {
     }
 }
 
-/*******MOBILE*******/
-
-/*SHOW MOBILE MENU*/
-
-function showMobileMenu(menu){
-    $(menu + ' ul.nav').fadeOut(300);
-    $(menu).delay(400).queue(function(){
-        $(this).addClass('open');
-        $(this).dequeue();
-    });
-    $(menu + ' ul.mobileNav').delay(400).animate({width:'show'}, 600);
-}
-
-function hideMobileMenu(container, subContainer){
-    $(subContainer).animate({width:'hide'}, 600);
-    $(container).delay(700).queue(function(){
-        $(this).removeClass('open');
-        $(this).dequeue();
-    });
-    $(container + ' ul.nav').delay(700).fadeIn(300);
-}
-
-$(document).mouseup(function (e){
-    clickOff(e, "#navTopMenu");
-});
-
-$(document).mouseup(function (e){
-    clickOff(e, "#nav");
-});
-
-function clickOff(e, container)
-{
-    var subContainer = container + " ul.mobileNav";
-
-    if ((!$(subContainer).is(e.target) // if the target of the click isn't the container...
-        && $(subContainer).has(e.target).length === 0) && $(container).hasClass('open')) // ... nor a descendant of the container
-    {
-        hideMobileMenu(container, subContainer);
-    }
-}
 
 
-
+/*******TOUCH/MOBILE*******/
 
 var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
+    window.isTouch = isTouch;
 
-if(isTouch){
-    $('<link rel="stylesheet" type="text/css" href="./css/mobile.css">').appendTo('head');
-}
-
-$(document).ready(function() {
+    /*Load mobile css if touch*/
     if(isTouch){
-        $('#navTopMenuWrapper').prependTo('#headerTopMenuWrapper');
-        $('#footer .column.businessInfo .BIcolumn').hide();
-        $('#footer .column.sitemap p.sitemapLinks').hide();
-        $('#footer .businessInfo h3.footerHeader').click(function(){
-            $('#footer .column.businessInfo .BIcolumn').animate({height:'toggle'}, 600);
-            $(this).toggleClass('expanded')
-
-            if($('#footer .sitemap h3.footerHeader').hasClass('expanded')){
-                $('#footer .column.sitemap p.sitemapLinks').animate({height:'toggle'}, 600);
-                $('#footer .sitemap h3.footerHeader').removeClass('expanded')
-            }
-        })
-
-        $('#footer .sitemap h3.footerHeader').click(function(){
-            $('#footer .column.sitemap p.sitemapLinks').animate({height:'toggle'}, 600);
-            $(this).toggleClass('expanded')
-
-            if($('#footer .businessInfo h3.footerHeader').hasClass('expanded')){
-                $('#footer .column.businessInfo .BIcolumn').animate({height:'toggle'}, 600);
-                $('#footer .businessInfo h3.footerHeader').removeClass('expanded')
-            }
-        })
+        $('<link rel="stylesheet" type="text/css" href="./css/mobile.css">').appendTo('head');
     }
+
+    /*Show Mobile Nav function*/
+    function showMobileMenu(menu){
+        $(menu + ' ul.nav.main').fadeOut(300);
+        $(menu).delay(400).queue(function(){
+            $(this).addClass('open');
+            $(this).dequeue();
+        });
+        $(menu + ' ul.mobileNav').delay(400).animate({width:'show'}, 600);
+    }
+
+    /*Hide mobile nav function*/
+    function hideMobileMenu(container, subContainer){
+        $(subContainer).animate({width:'hide'}, 600);
+        $(container).delay(700).queue(function(){
+            $(this).removeClass('open');
+            $(this).dequeue();
+        });
+        $(container + ' ul.nav.main').delay(700).fadeIn(300);
+    }
+
+
+    /*If Touch True Actions*/
+    $(document).ready(function() {
+        if(isTouch){
+            $('#navTopMenuWrapper').prependTo('#headerTopMenuWrapper');
+            $('#footer .column.businessInfo .BIcolumn').hide();
+            $('#footer .column.sitemap p.sitemapLinks').hide();
+            $('#footer .businessInfo h3.footerHeader').click(function(){
+                $('#footer .column.businessInfo .BIcolumn').animate({height:'toggle'}, 600);
+                $(this).toggleClass('expanded');
+
+                if($('#footer .sitemap h3.footerHeader').hasClass('expanded')){
+                    $('#footer .column.sitemap p.sitemapLinks').animate({height:'toggle'}, 600);
+                    $('#footer .sitemap h3.footerHeader').removeClass('expanded')
+                }
+            });
+
+            $('#footer .sitemap h3.footerHeader').click(function(){
+                $('#footer .column.sitemap p.sitemapLinks').animate({height:'toggle'}, 600);
+                $(this).toggleClass('expanded');
+
+                if($('#footer .businessInfo h3.footerHeader').hasClass('expanded')){
+                    $('#footer .column.businessInfo .BIcolumn').animate({height:'toggle'}, 600);
+                    $('#footer .businessInfo h3.footerHeader').removeClass('expanded')
+                }
+            });
+        }
+    });
+
+
+    /*Click off mobile nav*/
+
+    $(document).mouseup(function (e){
+        //Anytime there is a mouse click run clickOff for #nav.
+        clickOffMobileNav(e, "#nav");
+    });
+
+    function clickOffMobileNav(e, container)
+    {
+        //Mobile navigation of container.
+        var subContainer = container + " ul.mobileNav";
+
+        //If the subcontainer is not the targed
+        if ((!$(subContainer).is(e.target) // if the target of the click isn't the container...
+            && $(subContainer).has(e.target).length === 0) // ... nor a descendant of the container
+            && $(container).hasClass('open')) //and the container has class open
+        {
+            hideMobileMenu(container, subContainer); //Run hideMobileMenu with container and subcontainer.
+        }
+    }
+
+
+/*******MENU*******/
+
+    /*Main Menu*/
+
+
+
+    /*SubMenu*/
+
+    function showSubMenu(element){
+        //Add Class open
+        $('#nav ul.nav li' + element + ' a').addClass('open');
+        //Open element
+        $('#nav ul' + element).animate({height:'show'}, 500);
+    }
+
+    function hideSubMenu(element){
+        //Remove Class open
+        $('#nav ul.nav li' + element + ' a').removeClass('open');
+        //Close element
+        $('#nav ul' + element).animate({height:'hide'}, 500);
+    }
+
+    function hideOtherSubMenu(current){
+
+        //If element has class open
+        if($('#nav ul.nav li a.open')){
+
+            //Find the parent element and the first item in it's class list.
+            var parentLi = $('#nav ul.nav li a.open').parent(),
+                submenu = '.' + parentLi[0].classList[0];
+
+            //If it's not the same as the current run hideSubMenu
+            if(current != submenu) {
+                hideSubMenu(submenu);
+            }
+        }
+    }
+
+$(document).mouseup(function (e){
+    //Anytime there is a mouse click run clickOff for #nav.
+    clickOffNav(e, "#nav .nav .submenu");
 });
 
-function showSubMenu(element){
-    $('#nav ul.nav li' + element + ' a').addClass('open');
-    $('#nav ul' + element).animate({height:'show'}, 500);
-}
+//ToDo: Cleanup this function so that clicking on submenu doesn't close. Works for now.
 
-function hideSubMenu(element){
-    $('#nav ul.nav li' + element + ' a').removeClass('open');
-    $('#nav ul' + element).animate({height:'hide'}, 500);
-}
+function clickOffNav(e, container)
+{
+    //Mobile navigation of container.
+    //var subContainer = container + " ul.mobileNav";
 
-function hideOtherSubMenu(current){
-    if($('#nav ul.nav li a.open')){
+    //If the subcontainer is not the targed
+    if (!$(container).is(e.target) // if the target of the click isn't the container...
+        && $(container).has(e.target).length === 0) // ... nor a descendant of the container
+    {
+        if($('#nav ul.nav li a.open')){
 
-        var parentLi = $('#nav ul.nav li a.open').parent(),
-            submenu = '.' + parentLi[0].classList[0];
+            //Find the parent element and the first item in it's class list.
+            var parentLi = $('#nav ul.nav li a.open').parent(),
+                submenu = '.' + parentLi[0].classList[0];
 
-        console.log(parentLi);
-
-        if(current != submenu) {
-            hideSubMenu(submenu);
+            //If it's not the same as the current run hideSubMenu
+                hideSubMenu(submenu);
         }
     }
 }

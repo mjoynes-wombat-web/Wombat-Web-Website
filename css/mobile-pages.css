@@ -1,0 +1,235 @@
+@media screen and (max-width: 800px) {
+    #mission{
+        min-width:280px;
+        font-size:.9em;
+        margin-top:15px;
+        width:87.5%;
+        line-height:1.2em;
+    }
+
+    #greenLine{
+        width:260px;
+        background-size: contain;
+        margin-top:15px;
+    }
+}
+
+
+body {
+    min-width:320px;
+    min-height:480px;
+}
+
+#siteWrapper{
+    min-width: 320px;
+    min-height: 480px;
+    display:table;
+    position:absolute;
+    height:100%;
+    width:100%;
+    border-collapse: collapse;
+}
+
+#header{
+    min-width:320px;
+    min-height:480px;
+    height:100%;
+    top:0;
+    display:table-cell;
+    vertical-align: middle;
+    padding:68px 0 0 0;
+}
+
+#headerTopMenu{
+    width:100%;
+    max-width:470px;
+    top:0;
+    display:table;
+    vertical-align: middle;
+    float:left;
+    margin:0 auto;
+    min-height:inherit;
+    margin: 75px 0 20px 7.5%;
+}
+
+#headerTopMenuWrapper{
+    padding-left:0;
+    width:50%;
+    display:block;
+}
+
+#logoTopMenuWrapper{
+    width:24%;
+    min-width:85px;
+}
+
+#logotextTopMenuWrapper{
+    width:45%;
+    min-width:146px;
+}
+
+#logotextTopMenu{
+    min-width:146px;
+}
+
+#main{
+    min-width:320px;
+    min-height:480px;
+}
+
+#logoTopMenu{
+    width:100%;
+    min-width:85px;
+    max-width:164px;
+}
+
+#navTopMenuWrapper{
+    min-width:320px;
+}
+
+#navTopMenu {
+    position:absolute;
+    top:0;
+    left:0;
+    min-width:66px;
+}
+
+#nav, #navTopMenu{
+    top:0;
+    bottom:inherit;
+    width:100%;
+    float:left;
+    min-width:66px;
+}
+
+#logoMission{
+}
+
+#logo{
+    width:50%;
+    min-width:160px;
+    max-width:223px;
+}
+
+#logotext{
+    width:63%;
+    min-width:200px;
+    max-width:279px;
+}
+
+#mission{
+    max-width:640px;
+    width:65%;
+}
+
+#nav.open, #navTopMenu.open{
+    height:100%;
+    width:50%;
+}
+
+#nav ul.nav, #navTopMenu ul.nav{
+    border-radius:0;
+}
+
+#nav ul ul, #navTopMenu ul ul{
+    box-shadow: none;
+}
+
+#nav ul li.mobile, #navTopMenu ul li.mobile{
+    display:inline-block;
+    min-width:66px;
+}
+
+#nav ul li.desktop, #navTopMenu ul li.desktop{
+    display:none;
+}
+
+#nav ul li.menu, #navTopMenu ul li.menu{
+    width:100%;
+}
+
+#nav ul li.menu a, #navTopMenu ul li.menu a{
+    padding:0;
+}
+
+#nav ul.mobileNav, #navTopMenu ul.mobileNav{
+    display:none;
+    height:100%;
+    width:100%;
+}
+
+#nav ul li.menu ul, #navTopMenu ul li.menu ul{
+    display:none;
+    height:100%;
+    width:auto;
+}
+
+#nav ul.mobileNav li, #navTopMenu ul.mobileNav li{
+    display:block;
+    width:100%;
+}
+
+#navTopMenu ul, #navTopMenu ul li.home a{
+    border-radius:0;
+}
+
+#nav ul.mobileNav li a, #navTopMenu ul.mobileNav li a{
+    text-align:left;
+    padding:18px 10%;
+    width:80%;
+}
+
+#nav ul li.menu a, #navTopMenu ul li.menu a{
+    width:auto;
+}
+
+.sectionWrapper .column{
+    float:none;
+    width:96%;
+}
+
+#footer .column{
+    width:96%;
+    float:none;
+    clear:both;
+    overflow:auto;
+}
+
+#footer{
+    min-width:304px;
+}
+
+#footer .column.mission{
+    display:none;
+}
+
+#footer .businessInfo .BIcolumn{
+    width:48%;
+}
+
+#main h1.columnHeading{
+    margin-top:25px;
+}
+
+#footer h3.footerHeader{
+    background: url("../images/footer-expand.png") right 0 no-repeat;
+}
+
+#footer h3.footerHeader:hover{
+    background-position-y: -44px;
+    color:#836784;
+}
+
+#footer h3.footerHeader.expanded{
+    background-position-y: -22px;
+}
+
+#footer h3.footerHeader.expanded:hover{
+    background-position-y: -66px;
+}
+
+#contact .column{
+    clear:both;
+    overflow:auto;
+}
+
