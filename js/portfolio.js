@@ -115,7 +115,7 @@ function cyclePortfolio (i, item){
     }, 1000);
 };
 
-cyclePortfolio(printItems.length -1, printItems);
+//cyclePortfolio(printItems.length -1, printItems);
 //cyclePortfolio(logoItems.length -1, logoItems);
 //cyclePortfolio(apparelItems.length -1, apparelItems);
 //cyclePortfolio(signItems.length -1, signItems);
