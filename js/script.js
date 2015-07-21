@@ -171,9 +171,12 @@ var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
 /*******MENU*******/
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /*Main Menu*/
 
 =======
+=======
+>>>>>>> parent of 814b3be... Sub Menu Work
 var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
 >>>>>>> parent of 814b3be... Sub Menu Work
 
@@ -210,6 +213,7 @@ var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
         }
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 $(document).mouseup(function (e){
     //Anytime there is a mouse click run clickOff for #nav.
@@ -240,6 +244,9 @@ function clickOffNav(e, container)
 }
 
 
+=======
+});
+>>>>>>> parent of 814b3be... Sub Menu Work
 =======
 });
 >>>>>>> parent of 814b3be... Sub Menu Work

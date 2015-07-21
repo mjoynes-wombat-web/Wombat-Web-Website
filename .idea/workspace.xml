@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="60c89b2e-deca-4b71-bc10-a65900ca372b" name="Default" comment="">
 <<<<<<< HEAD
+<<<<<<< HEAD
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/about.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/contact.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/home.css" />
@@ -18,6 +19,11 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/mobile.css" afterPath="$PROJECT_DIR$/css/mobile.css" />
+=======
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/portfolio.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Source Files/footer-collapse.ai" afterPath="$PROJECT_DIR$/Source Files/footer-collapse.ai" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+>>>>>>> parent of 814b3be... Sub Menu Work
 =======
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/portfolio.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Source Files/footer-collapse.ai" afterPath="$PROJECT_DIR$/Source Files/footer-collapse.ai" />
@@ -73,8 +79,13 @@
         <entry file="file://$PROJECT_DIR$/js/pages.js">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <state vertical-scroll-proportion="0.0">
               <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="36" selection-end-column="49" />
+=======
+            <state vertical-scroll-proportion="0.7016509">
+              <caret line="50" column="96" selection-start-line="50" selection-start-column="96" selection-end-line="50" selection-end-column="96" />
+>>>>>>> parent of 814b3be... Sub Menu Work
 =======
             <state vertical-scroll-proportion="0.7016509">
               <caret line="50" column="96" selection-start-line="50" selection-start-column="96" selection-end-line="50" selection-end-column="96" />
@@ -89,7 +100,11 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
 <<<<<<< HEAD
+<<<<<<< HEAD
               <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="32" />
+=======
+              <caret line="229" column="26" selection-start-line="229" selection-start-column="26" selection-end-line="229" selection-end-column="26" />
+>>>>>>> parent of 814b3be... Sub Menu Work
 =======
               <caret line="229" column="26" selection-start-line="229" selection-start-column="26" selection-end-line="229" selection-end-column="26" />
 >>>>>>> parent of 814b3be... Sub Menu Work
@@ -103,7 +118,11 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
 <<<<<<< HEAD
+<<<<<<< HEAD
               <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+=======
+              <caret line="175" column="79" selection-start-line="175" selection-start-column="79" selection-end-line="175" selection-end-column="79" />
+>>>>>>> parent of 814b3be... Sub Menu Work
 =======
               <caret line="175" column="79" selection-start-line="175" selection-start-column="79" selection-end-line="175" selection-end-column="79" />
 >>>>>>> parent of 814b3be... Sub Menu Work
@@ -116,10 +135,13 @@
         <entry file="file://$PROJECT_DIR$/services.html">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <state vertical-scroll-proportion="0.0">
               <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
               <folding />
 =======
+=======
+>>>>>>> parent of 814b3be... Sub Menu Work
             <state vertical-scroll-proportion="-0.880597">
               <caret line="115" column="2" selection-start-line="115" selection-start-column="2" selection-end-line="115" selection-end-column="2" />
               <folding>
@@ -159,6 +181,7 @@
         <option value="$PROJECT_DIR$/css/main-old.css" />
         <option value="$PROJECT_DIR$/animate.html" />
 <<<<<<< HEAD
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/js/portfolio.js" />
         <option value="$PROJECT_DIR$/portfolio.html" />
         <option value="$PROJECT_DIR$/css/main.css" />
@@ -175,10 +198,16 @@
         <option value="$PROJECT_DIR$/js/home.js" />
 =======
         <option value="$PROJECT_DIR$/css/main.css" />
+=======
+        <option value="$PROJECT_DIR$/css/main.css" />
+>>>>>>> parent of 814b3be... Sub Menu Work
         <option value="$PROJECT_DIR$/css/mobile.css" />
         <option value="$PROJECT_DIR$/js/script.js" />
         <option value="$PROJECT_DIR$/js/portfolio.js" />
         <option value="$PROJECT_DIR$/index.html" />
+<<<<<<< HEAD
+>>>>>>> parent of 814b3be... Sub Menu Work
+=======
 >>>>>>> parent of 814b3be... Sub Menu Work
       </list>
     </option>
@@ -703,6 +732,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+<<<<<<< HEAD
         </state>
       </provider>
     </entry>
@@ -738,6 +768,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+=======
+>>>>>>> parent of 814b3be... Sub Menu Work
         </state>
       </provider>
     </entry>
@@ -767,7 +799,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
 <<<<<<< HEAD
+<<<<<<< HEAD
           <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+=======
+          <caret line="229" column="26" selection-start-line="229" selection-start-column="26" selection-end-line="229" selection-end-column="26" />
+>>>>>>> parent of 814b3be... Sub Menu Work
 =======
           <caret line="229" column="26" selection-start-line="229" selection-start-column="26" selection-end-line="229" selection-end-column="26" />
 >>>>>>> parent of 814b3be... Sub Menu Work
@@ -779,7 +815,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
 <<<<<<< HEAD
+<<<<<<< HEAD
           <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+=======
+          <caret line="175" column="79" selection-start-line="175" selection-start-column="79" selection-end-line="175" selection-end-column="79" />
+>>>>>>> parent of 814b3be... Sub Menu Work
 =======
           <caret line="175" column="79" selection-start-line="175" selection-start-column="79" selection-end-line="175" selection-end-column="79" />
 >>>>>>> parent of 814b3be... Sub Menu Work
@@ -790,8 +830,13 @@
     <entry file="file://$PROJECT_DIR$/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <state vertical-scroll-proportion="0.0">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="25" />
+=======
+        <state vertical-scroll-proportion="-0.880597">
+          <caret line="115" column="2" selection-start-line="115" selection-start-column="2" selection-end-line="115" selection-end-column="2" />
+>>>>>>> parent of 814b3be... Sub Menu Work
 =======
         <state vertical-scroll-proportion="-0.880597">
           <caret line="115" column="2" selection-start-line="115" selection-start-column="2" selection-end-line="115" selection-end-column="2" />
@@ -813,8 +858,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/pages.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state vertical-scroll-proportion="0.0">
           <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="36" selection-end-column="49" />
+=======
+        <state vertical-scroll-proportion="0.7016509">
+          <caret line="50" column="96" selection-start-line="50" selection-start-column="96" selection-end-line="50" selection-end-column="96" />
+>>>>>>> parent of 814b3be... Sub Menu Work
 =======
         <state vertical-scroll-proportion="0.7016509">
           <caret line="50" column="96" selection-start-line="50" selection-start-column="96" selection-end-line="50" selection-end-column="96" />
